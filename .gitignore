@@ -1,0 +1,16 @@
+# OS files
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# Temp files
+*.tmp
+*.log
+
+# Large videos (>100MB) blocked by GitHub
+img/videos profissionais 03.MP4
+img/videos profissionais 04.MP4
