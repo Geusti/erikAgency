@@ -209,6 +209,7 @@
         <!-- Desktop Nav Links -->
         <nav class="hidden md:flex items-center gap-10">
             <a href="#branding" class="nav-link text-sm uppercase tracking-widest text-lux-obsidian/70 dark:text-lux-cream/70 hover:text-lux-gold-500 dark:hover:text-lux-gold-500 transition-colors">Branding</a>
+            <a href="#ensaio" class="nav-link text-sm uppercase tracking-widest text-lux-obsidian/70 dark:text-lux-cream/70 hover:text-lux-gold-500 dark:hover:text-lux-gold-500 transition-colors">Ensaios</a>
             <a href="#audiovisual" class="nav-link text-sm uppercase tracking-widest text-lux-obsidian/70 dark:text-lux-cream/70 hover:text-lux-gold-500 dark:hover:text-lux-gold-500 transition-colors">Audiovisual</a>
             <a href="#resultados" class="nav-link text-sm uppercase tracking-widest text-lux-obsidian/70 dark:text-lux-cream/70 hover:text-lux-gold-500 dark:hover:text-lux-gold-500 transition-colors">Resultados</a>
             <a href="#visionario" class="nav-link text-sm uppercase tracking-widest text-lux-obsidian/70 dark:text-lux-cream/70 hover:text-lux-gold-500 dark:hover:text-lux-gold-500 transition-colors">A Agência</a>
@@ -239,9 +240,10 @@
     <div id="mobile-menu" class="fixed inset-0 z-40 bg-lux-obsidian translate-x-full transition-transform duration-500 flex flex-col justify-between p-6 pt-24 pb-8">
         <nav class="flex flex-col gap-5">
             <a href="#branding" class="mobile-nav-link font-serif text-2xl text-lux-cream hover:text-lux-gold-500 transition-colors">01. Branding & Design</a>
-            <a href="#audiovisual" class="mobile-nav-link font-serif text-2xl text-lux-cream hover:text-lux-gold-500 transition-colors">02. Produção Audiovisual</a>
-            <a href="#resultados" class="mobile-nav-link font-serif text-2xl text-lux-cream hover:text-lux-gold-500 transition-colors">03. Casos de Sucesso</a>
-            <a href="#visionario" class="mobile-nav-link font-serif text-2xl text-lux-cream hover:text-lux-gold-500 transition-colors">04. O Visionário</a>
+            <a href="#ensaio" class="mobile-nav-link font-serif text-2xl text-lux-cream hover:text-lux-gold-500 transition-colors">02. Ensaios Fotográficos</a>
+            <a href="#audiovisual" class="mobile-nav-link font-serif text-2xl text-lux-cream hover:text-lux-gold-500 transition-colors">03. Produção Audiovisual</a>
+            <a href="#resultados" class="mobile-nav-link font-serif text-2xl text-lux-cream hover:text-lux-gold-500 transition-colors">04. Casos de Sucesso</a>
+            <a href="#visionario" class="mobile-nav-link font-serif text-2xl text-lux-cream hover:text-lux-gold-500 transition-colors">05. O Visionário</a>
         </nav>
         
         <div class="flex flex-col gap-4 border-t border-lux-gold-500/10 pt-6">
@@ -506,6 +508,225 @@
                 <p class="reveal reveal-up text-[10px] md:text-xs uppercase tracking-[0.3em] text-lux-gold-500 mt-4 md:mt-6 font-semibold" style="transition-delay: 200ms;">
                     — Posicionamento & Autoridade
                 </p>
+            </div>
+        </section>
+
+        <!-- SECTION: LUXURY PHOTOSHOOT (PORTRAIT GALLERY) -->
+        <section id="ensaio" class="py-16 md:py-24 px-4 md:px-16 lg:px-24 bg-lux-cream dark:bg-lux-obsidian relative border-b border-lux-gold-500/10">
+            <div class="absolute top-1/4 right-0 w-[300px] h-[300px] bg-lux-gold-500/5 blur-[90px] rounded-full pointer-events-none"></div>
+
+            <div class="max-w-[1400px] mx-auto">
+                
+                <!-- Section Header -->
+                <div class="max-w-3xl mb-10 md:mb-16 text-left">
+                    <div class="reveal reveal-up inline-flex items-center gap-3 mb-3 md:mb-4">
+                        <span class="h-[1px] w-8 bg-lux-gold-500"></span>
+                        <span class="text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium text-lux-gold-500">Direção de Imagem</span>
+                    </div>
+                    <h2 class="reveal reveal-up font-serif text-3xl md:text-5xl text-lux-obsidian dark:text-lux-cream leading-tight">
+                        Direção de Imagem & <span class="font-serif italic text-lux-gold-500">Ensaios de Luxo</span>
+                    </h2>
+                    <p class="reveal reveal-up font-sans text-xs md:text-base text-lux-obsidian/70 dark:text-lux-cream/70 mt-3 md:mt-4 max-w-xl leading-relaxed">
+                        Retratos de alta fidelidade que revelam a autoridade e a essência humana de profissionais médicos de excelência. Criamos e dirigimos ensaios fotográficos exclusivos que constroem conexões imediatas de alto padrão.
+                    </p>
+                </div>
+
+                <!-- Photoshoot Horizontal Carousel -->
+                <div class="reveal reveal-scale">
+                    <div class="flex gap-4 md:gap-6 overflow-x-auto hide-scrollbar snap-x cursor-grab active:cursor-grabbing pb-6 md:pb-8" id="photoshoot-carousel">
+                        
+                        <!-- Slide 01 -->
+                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-[300px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                                <img src="img/ensaio-fotografico-01.JPEG" alt="Retrato de Luxo 01" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                            </div>
+                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
+                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Posicionamento Nobre</h4>
+                            </div>
+                        </div>
+
+                        <!-- Slide 02 -->
+                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-[300px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                                <img src="img/ensaio-fotografico-02.JPEG" alt="Retrato de Luxo 02" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                            </div>
+                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
+                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Presença Executiva</h4>
+                            </div>
+                        </div>
+
+                        <!-- Slide 03 -->
+                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-[300px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                                <img src="img/ensaio-fotografico-03.JPEG" alt="Retrato de Luxo 03" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                            </div>
+                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
+                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Expressão Médica</h4>
+                            </div>
+                        </div>
+
+                        <!-- Slide 04 -->
+                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-[300px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                                <img src="img/ensaio-fotografico-04.JPEG" alt="Retrato de Luxo 04" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                            </div>
+                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
+                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Sofisticação Visual</h4>
+                            </div>
+                        </div>
+
+                        <!-- Slide 05 -->
+                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-[300px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                                <img src="img/ensaio-fotografico-05.JPEG" alt="Retrato de Luxo 05" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                            </div>
+                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
+                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Essência Científica</h4>
+                            </div>
+                        </div>
+
+                        <!-- Slide 06 -->
+                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-[300px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                                <img src="img/ensaio-fotografico-06.JPEG" alt="Retrato de Luxo 06" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                            </div>
+                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
+                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Minimalismo Profissional</h4>
+                            </div>
+                        </div>
+
+                        <!-- Slide 07 -->
+                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-[300px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                                <img src="img/ensaio-fotografico-07.JPEG" alt="Retrato de Luxo 07" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                            </div>
+                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
+                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Retrato Corporativo</h4>
+                            </div>
+                        </div>
+
+                        <!-- Slide 08 -->
+                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-[300px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                                <img src="img/ensaio-fotografico-08.JPEG" alt="Retrato de Luxo 08" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                            </div>
+                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
+                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Confiança e Credibilidade</h4>
+                            </div>
+                        </div>
+
+                        <!-- Slide 09 -->
+                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-[300px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                                <img src="img/ensaio-fotografico-09.JPEG" alt="Retrato de Luxo 09" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                            </div>
+                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
+                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Elegância Clínica</h4>
+                            </div>
+                        </div>
+
+                        <!-- Slide 10 -->
+                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-[300px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                                <img src="img/ensaio-fotografico-10.JPEG" alt="Retrato de Luxo 10" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                            </div>
+                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
+                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Posicionamento de Valor</h4>
+                            </div>
+                        </div>
+
+                        <!-- Slide 12 -->
+                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-[300px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                                <img src="img/ensaio-fotografico-12.JPEG" alt="Retrato de Luxo 12" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                            </div>
+                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
+                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Estilo & Sofisticação</h4>
+                            </div>
+                        </div>
+
+                        <!-- Slide 13 -->
+                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-[300px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                                <img src="img/ensaio-fotografico-13.JPEG" alt="Retrato de Luxo 13" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                            </div>
+                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
+                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Produção Executiva</h4>
+                            </div>
+                        </div>
+
+                        <!-- Slide 14 -->
+                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-[300px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                                <img src="img/ensaio-fotografico-14.JPEG" alt="Retrato de Luxo 14" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                            </div>
+                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
+                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Médico Visionário</h4>
+                            </div>
+                        </div>
+
+                        <!-- Slide 15 -->
+                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-[300px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                                <img src="img/ensaio-fotografico-15.JPEG" alt="Retrato de Luxo 15" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                            </div>
+                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
+                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Expressão e Arte</h4>
+                            </div>
+                        </div>
+
+                        <!-- Slide 16 -->
+                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-[300px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                                <img src="img/ensaio-fotografico-16.JPEG" alt="Retrato de Luxo 16" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                            </div>
+                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
+                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Profissionalismo Estético</h4>
+                            </div>
+                        </div>
+
+                        <!-- Slide 17 -->
+                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-[300px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                                <img src="img/ensaio-fotografico-17.JPEG" alt="Retrato de Luxo 17" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                            </div>
+                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
+                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Identidade Profissional</h4>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <!-- Carousel Indicators & Navigation -->
+                    <div class="flex items-center justify-between mt-4 md:mt-6">
+                        <span class="text-[10px] tracking-widest text-lux-gold-500/60 font-sans uppercase">Arraste para navegar</span>
+                        <div class="flex gap-3">
+                            <button id="photoshoot-prev" class="p-2 border border-lux-gold-500/20 hover:border-lux-gold-500 text-lux-gold-500 hover:bg-lux-gold-500/10 transition-colors cursor-pointer" aria-label="Anterior">
+                                <span class="material-symbols-outlined text-xs md:text-sm">arrow_back</span>
+                            </button>
+                            <button id="photoshoot-next" class="p-2 border border-lux-gold-500/20 hover:border-lux-gold-500 text-lux-gold-500 hover:bg-lux-gold-500/10 transition-colors cursor-pointer" aria-label="Próximo">
+                                <span class="material-symbols-outlined text-xs md:text-sm">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -927,6 +1148,7 @@
             
             <nav class="flex flex-wrap justify-center gap-6 md:gap-8 text-[10px] md:text-xs tracking-wider uppercase font-semibold">
                 <a href="#branding" class="hover:text-lux-gold-500 transition-colors">Portfólio</a>
+                <a href="#ensaio" class="hover:text-lux-gold-500 transition-colors">Ensaios</a>
                 <a href="#audiovisual" class="hover:text-lux-gold-500 transition-colors">Vídeos</a>
                 <a href="#resultados" class="hover:text-lux-gold-500 transition-colors">Casos</a>
                 <a href="#visionario" class="hover:text-lux-gold-500 transition-colors">A Agência</a>
@@ -943,6 +1165,10 @@
         <a class="flex flex-col items-center justify-center text-lux-gold-500 font-bold scale-95 transition-transform duration-200" href="#branding">
             <span class="material-symbols-outlined text-lg">grid_view</span>
             <span class="text-[8px] uppercase tracking-wider mt-0.5 font-sans">Feed</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-lux-obsidian/75 dark:text-lux-cream/75 hover:text-lux-gold-500 scale-95 transition-transform duration-200" href="#ensaio">
+            <span class="material-symbols-outlined text-lg">photo_camera</span>
+            <span class="text-[8px] uppercase tracking-wider mt-0.5 font-sans">Ensaios</span>
         </a>
         <a class="flex flex-col items-center justify-center text-lux-obsidian/75 dark:text-lux-cream/75 hover:text-lux-gold-500 scale-95 transition-transform duration-200" href="#audiovisual">
             <span class="material-symbols-outlined text-lg">video_library</span>
@@ -1034,7 +1260,8 @@
             const carousels = [
                 document.getElementById('content-carousel'),
                 document.getElementById('video-carousel'),
-                document.getElementById('results-carousel')
+                document.getElementById('results-carousel'),
+                document.getElementById('photoshoot-carousel')
             ];
             
             carousels.forEach(carousel => {
@@ -1082,6 +1309,21 @@
                 
                 nextBtn.addEventListener('click', () => {
                     mainCarousel.scrollBy({ left: 240, behavior: 'smooth' });
+                });
+            }
+
+            // Specific prev/next buttons for photoshoot carousel
+            const photoshootCarousel = document.getElementById('photoshoot-carousel');
+            const photoshootPrevBtn = document.getElementById('photoshoot-prev');
+            const photoshootNextBtn = document.getElementById('photoshoot-next');
+            
+            if (photoshootCarousel && photoshootPrevBtn && photoshootNextBtn) {
+                photoshootPrevBtn.addEventListener('click', () => {
+                    photoshootCarousel.scrollBy({ left: -260, behavior: 'smooth' });
+                });
+                
+                photoshootNextBtn.addEventListener('click', () => {
+                    photoshootCarousel.scrollBy({ left: 260, behavior: 'smooth' });
                 });
             }
 
