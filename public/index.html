@@ -1296,8 +1296,7 @@
             const carousels = [
                 document.getElementById('content-carousel'),
                 document.getElementById('video-carousel'),
-                document.getElementById('results-carousel'),
-                document.getElementById('photoshoot-carousel')
+                document.getElementById('results-carousel')
             ];
             
             carousels.forEach(carousel => {
@@ -1348,19 +1347,89 @@
                 });
             }
 
-            // Specific prev/next buttons for photoshoot carousel
+            // --- 4b. 3D COVERFLOW PHOTOSHOOT CAROUSEL ENGINE ---
             const photoshootCarousel = document.getElementById('photoshoot-carousel');
             const photoshootPrevBtn = document.getElementById('photoshoot-prev');
             const photoshootNextBtn = document.getElementById('photoshoot-next');
             
             if (photoshootCarousel && photoshootPrevBtn && photoshootNextBtn) {
+                const items = photoshootCarousel.querySelectorAll('.carousel-item');
+                let currentIndex = 0;
+                const totalItems = items.length;
+                
+                function updateCoverflow() {
+                    items.forEach((item, idx) => {
+                        // Reset base classes to ensure smooth transitions
+                        item.className = "carousel-item absolute m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden group transition-all duration-700 ease-in-out";
+                        
+                        let offset = idx - currentIndex;
+                        
+                        // Handle circular index wrapping
+                        if (offset < -1) {
+                            if (currentIndex === totalItems - 1 && idx === 0) {
+                                offset = 1;
+                            } else {
+                                offset = -2;
+                            }
+                        } else if (offset > 1) {
+                            if (currentIndex === 0 && idx === totalItems - 1) {
+                                offset = -1;
+                            } else {
+                                offset = 2;
+                            }
+                        }
+                        
+                        if (offset === 0) {
+                            // Active item (Center)
+                            item.classList.add('opacity-100', 'scale-100', 'z-20', 'translate-x-0', 'blur-0');
+                        } else if (offset === -1) {
+                            // Left item (Previous)
+                            item.classList.add('opacity-45', 'scale-85', 'z-10', '-translate-x-[40%]', 'sm:-translate-x-[110%]', 'blur-[2px]', 'pointer-events-none');
+                        } else if (offset === 1) {
+                            // Right item (Next)
+                            item.classList.add('opacity-45', 'scale-85', 'z-10', 'translate-x-[40%]', 'sm:translate-x-[110%]', 'blur-[2px]', 'pointer-events-none');
+                        } else {
+                            // Hidden items
+                            item.classList.add('opacity-0', 'scale-75', 'z-0', 'translate-x-0', 'blur-[6px]', 'pointer-events-none');
+                        }
+                    });
+                }
+                
+                // Initialize coverflow
+                updateCoverflow();
+                
+                // Prev button handler
                 photoshootPrevBtn.addEventListener('click', () => {
-                    photoshootCarousel.scrollBy({ left: -260, behavior: 'smooth' });
+                    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+                    updateCoverflow();
                 });
                 
+                // Next button handler
                 photoshootNextBtn.addEventListener('click', () => {
-                    photoshootCarousel.scrollBy({ left: 260, behavior: 'smooth' });
+                    currentIndex = (currentIndex + 1) % totalItems;
+                    updateCoverflow();
                 });
+                
+                // Mobile swipe gestures
+                let startX = 0;
+                let endX = 0;
+                
+                photoshootCarousel.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                }, { passive: true });
+                
+                photoshootCarousel.addEventListener('touchend', (e) => {
+                    endX = e.changedTouches[0].clientX;
+                    const diff = startX - endX;
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0) {
+                            currentIndex = (currentIndex + 1) % totalItems;
+                        } else {
+                            currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+                        }
+                        updateCoverflow();
+                    }
+                }, { passive: true });
             }
 
             // --- 5. AUTOMATIC INTELLIGENT VIDEO PLAYBACK ---
