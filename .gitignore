@@ -11,6 +11,15 @@ desktop.ini
 *.tmp
 *.log
 
+# Dependencies
+node_modules/
+
+# Credentials
+.env
+
+# Local Databases
+data/
+
 # Large videos (>100MB) blocked by GitHub
-img/videos profissionais 03.MP4
-img/videos profissionais 04.MP4
+public/img/videos profissionais 03.MP4
+public/img/videos profissionais 04.MP4
