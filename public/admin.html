@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Painel Admin | ESTÉTICA</title>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        lux: {
+                            gold: {
+                                100: "#F5F0E6",
+                                200: "#E6D9C3",
+                                300: "#D2BD9C",
+                                400: "#C5A880",
+                                500: "#B89668",
+                                600: "#A38054",
+                                700: "#8A6A43"
+                            },
+                            obsidian: "#0B0B0B",
+                            charcoal: "#141414",
+                            cream: "#FAF8F5",
+                            silk: "#F0EAE1"
+                        }
+                    },
+                    fontFamily: {
+                        serif: ["Playfair Display", "serif"],
+                        sans: ["DM Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-lux-obsidian text-lux-cream font-sans min-h-screen flex flex-col selection:bg-lux-gold-500 selection:text-white">
+
+    <!-- Header -->
+    <header class="h-20 border-b border-lux-gold-500/10 flex items-center justify-between px-6 md:px-12 bg-lux-charcoal/50 backdrop-blur-md">
+        <div class="flex items-center gap-2">
+            <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-lux-cream">ESTÉTICA</span>
+            <span class="text-[8px] uppercase tracking-[0.3em] text-lux-gold-500 border border-lux-gold-500/30 px-1.5 py-0.5 rounded-sm">ADMIN</span>
+        </div>
+        <button id="logout-btn" class="hidden px-4 py-2 border border-lux-gold-500/20 hover:border-lux-gold-500 text-lux-gold-500 hover:bg-lux-gold-500/10 text-xs uppercase tracking-wider transition-all cursor-pointer">
+            Sair
+        </button>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center p-4">
+        
+        <!-- Auth Section -->
+        <div id="auth-panel" class="w-full max-w-md bg-lux-charcoal border border-lux-gold-500/10 p-8 rounded-2xl shadow-2xl">
+            <div class="text-center mb-6">
+                <span class="material-symbols-outlined text-lux-gold-500 text-4xl mb-2">lock_person</span>
+                <h2 class="font-serif text-2xl text-white">Acesso Restrito</h2>
+                <p class="text-xs text-lux-gold-300/60 mt-1">Insira a senha de administrador da agência</p>
+            </div>
+            
+            <form id="login-form" class="space-y-4">
+                <div>
+                    <label for="password" class="text-[10px] uppercase tracking-wider text-lux-gold-400 mb-1.5 block font-bold">Senha de Acesso</label>
+                    <input type="password" id="password" required class="w-full bg-lux-obsidian border border-lux-gold-500/20 focus:border-lux-gold-500 focus:ring-1 focus:ring-lux-gold-500 text-white rounded-md px-3.5 py-2.5 text-sm transition-colors placeholder:text-zinc-600" placeholder="••••••••">
+                </div>
+                
+                <button type="submit" class="w-full py-3 bg-lux-gold-500 hover:bg-lux-gold-600 text-white font-sans text-xs uppercase tracking-widest font-bold transition-all cursor-pointer">
+                    Entrar no Painel
+                </button>
+                
+                <div id="login-error" class="hidden text-xs text-center text-red-500 font-semibold bg-red-500/10 p-2 border border-red-500/20 rounded mt-2"></div>
+            </form>
+        </div>
+
+        <!-- Dashboard Section -->
+        <div id="dashboard-panel" class="hidden w-full max-w-6xl bg-lux-charcoal border border-lux-gold-500/10 p-6 md:p-8 rounded-2xl shadow-2xl my-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+                <div>
+                    <h2 class="font-serif text-3xl text-white font-bold">Clientes Interessados (Leads)</h2>
+                    <p class="text-xs text-lux-gold-300/60 mt-1">Histórico completo de cadastros feitos no site.</p>
+                </div>
+                <button id="export-csv-btn" class="px-5 py-3 bg-lux-gold-500 hover:bg-lux-gold-600 text-white font-sans text-xs uppercase tracking-widest font-bold transition-all flex items-center gap-2 cursor-pointer shadow-lg hover:shadow-lux-gold-500/20">
+                    <span class="material-symbols-outlined text-sm">download</span>
+                    <span>Exportar CSV</span>
+                </button>
+            </div>
+
+            <!-- Table Container -->
+            <div class="overflow-x-auto border border-lux-gold-500/10 rounded-lg">
+                <table class="w-full text-left border-collapse text-xs md:text-sm">
+                    <thead>
+                        <tr class="bg-lux-obsidian text-lux-gold-400 border-b border-lux-gold-500/10 uppercase text-[9px] tracking-wider font-bold">
+                            <th class="py-4 px-4">Data/Hora</th>
+                            <th class="py-4 px-4">Nome</th>
+                            <th class="py-4 px-4">Contato</th>
+                            <th class="py-4 px-4">Especialidade/Clínica</th>
+                            <th class="py-4 px-4">Mensagem / Objetivos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leads-table-body" class="divide-y divide-lux-gold-500/5 text-zinc-300">
+                        <!-- Dynamic content -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="empty-state" class="hidden text-center py-12 text-zinc-500 text-sm">
+                <span class="material-symbols-outlined text-4xl mb-2">inbox</span>
+                <p>Nenhuma lead cadastrada até o momento.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="py-6 text-center text-[10px] text-lux-cream/20 border-t border-lux-gold-500/10">
+        &copy; 2026 ESTÉTICA. Sistema de Leads Exclusivo.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const authPanel = document.getElementById('auth-panel');
+            const dashboardPanel = document.getElementById('dashboard-panel');
+            const loginForm = document.getElementById('login-form');
+            const passwordInput = document.getElementById('password');
+            const loginError = document.getElementById('login-error');
+            const tableBody = document.getElementById('leads-table-body');
+            const emptyState = document.getElementById('empty-state');
+            const logoutBtn = document.getElementById('logout-btn');
+            const exportCsvBtn = document.getElementById('export-csv-btn');
+
+            let leadsData = [];
+            let activePassword = '';
+
+            // Check session storage
+            const storedPass = sessionStorage.getItem('admin_pass');
+            if (storedPass) {
+                activePassword = storedPass;
+                loadDashboard();
+            }
+
+            loginForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                loginError.classList.add('hidden');
+                
+                const pass = passwordInput.value;
+                try {
+                    const success = await fetchLeads(pass);
+                    if (success) {
+                        activePassword = pass;
+                        sessionStorage.setItem('admin_pass', pass);
+                        loadDashboard();
+                    }
+                } catch (err) {
+                    showError('Erro ao se conectar com o servidor.');
+                }
+            });
+
+            logoutBtn.addEventListener('click', () => {
+                sessionStorage.removeItem('admin_pass');
+                activePassword = '';
+                leadsData = [];
+                dashboardPanel.classList.add('hidden');
+                logoutBtn.classList.add('hidden');
+                authPanel.classList.remove('hidden');
+                passwordInput.value = '';
+            });
+
+            async function fetchLeads(pass) {
+                const response = await fetch(`/api/leads?password=${encodeURIComponent(pass)}`);
+                const data = await response.json();
+                
+                if (response.ok && data.success) {
+                    leadsData = data.leads;
+                    return true;
+                } else {
+                    showError(data.error || 'Acesso não autorizado.');
+                    return false;
+                }
+            }
+
+            function showError(msg) {
+                loginError.textContent = msg;
+                loginError.classList.remove('hidden');
+            }
+
+            async function loadDashboard() {
+                const success = await fetchLeads(activePassword);
+                if (success) {
+                    authPanel.classList.add('hidden');
+                    dashboardPanel.classList.remove('hidden');
+                    logoutBtn.classList.remove('hidden');
+                    renderLeads();
+                } else {
+                    sessionStorage.removeItem('admin_pass');
+                    activePassword = '';
+                }
+            }
+
+            function renderLeads() {
+                tableBody.innerHTML = '';
+                
+                if (leadsData.length === 0) {
+                    emptyState.classList.remove('hidden');
+                    return;
+                }
+                
+                emptyState.classList.add('hidden');
+                
+                leadsData.forEach(lead => {
+                    const row = document.createElement('tr');
+                    row.className = "hover:bg-lux-charcoal/30 transition-colors";
+                    
+                    const dateStr = new Date(lead.created_at).toLocaleString('pt-BR');
+                    
+                    row.innerHTML = `
+                        <td class="py-4 px-4 font-mono text-xs text-lux-gold-400">${dateStr}</td>
+                        <td class="py-4 px-4 font-bold text-white">${escapeHtml(lead.name)}</td>
+                        <td class="py-4 px-4 leading-normal">
+                            <div>${escapeHtml(lead.email)}</div>
+                            <div class="text-[10px] text-zinc-500 font-mono mt-0.5">${escapeHtml(lead.phone)}</div>
+                        </td>
+                        <td class="py-4 px-4 italic text-lux-gold-200">${escapeHtml(lead.specialty || 'Não informado')}</td>
+                        <td class="py-4 px-4 text-xs leading-relaxed max-w-xs md:max-w-sm truncate hover:text-clip hover:overflow-visible hover:whitespace-normal" title="${escapeHtml(lead.message || '')}">
+                            ${escapeHtml(lead.message || '-')}
+                        </td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            }
+
+            function escapeHtml(text) {
+                if (!text) return '';
+                return text
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&#039;");
+            }
+
+            exportCsvBtn.addEventListener('click', () => {
+                if (leadsData.length === 0) return;
+                
+                // Construct CSV content (semicolon separator is standard for Excel in PT-BR)
+                let csvContent = "data:text/csv;charset=utf-8,\uFEFF"; // Byte Order Mark for Excel encoding
+                csvContent += "Data/Hora;Nome;E-mail;Telefone/WhatsApp;Especialidade/Clinica;Objetivos\r\n";
+                
+                leadsData.forEach(lead => {
+                    const dateStr = new Date(lead.created_at).toLocaleString('pt-BR');
+                    const row = [
+                        dateStr,
+                        lead.name,
+                        lead.email,
+                        lead.phone,
+                        lead.specialty || '',
+                        lead.message || ''
+                    ].map(val => `"${val.replace(/"/g, '""')}"`).join(";");
+                    
+                    csvContent += row + "\r\n";
+                });
+                
+                const encodedUri = encodeURI(csvContent);
+                const link = document.createElement("a");
+                link.setAttribute("href", encodedUri);
+                link.setAttribute("download", `estetica_leads_${new Date().toISOString().slice(0, 10)}.csv`);
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+        });
+    </script>
+</body>
+</html>
