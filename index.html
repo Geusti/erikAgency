@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html class="dark" lang="pt-BR">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
-    <title>ESTÉTICA | Marketing de Luxo para Médicos & Estética</title>
-    
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport" />
+    <title>STUDIO VENY | Marketing Visual para Médicos & Estética</title>
+
     <!-- Material Symbols -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
     <!-- Google Fonts: Playfair Display (Luxury Headings), DM Sans (Clean Sans) -->
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap"
+        rel="stylesheet" />
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
@@ -49,7 +54,7 @@
             }
         }
     </script>
-    
+
     <style>
         /* Base Styling */
         .material-symbols-outlined {
@@ -57,32 +62,41 @@
             display: inline-block;
             vertical-align: middle;
         }
-        
+
         html {
             scroll-behavior: smooth;
             scrollbar-width: thin;
         }
-        
+
         /* Custom Premium Scrollbar */
         html::-webkit-scrollbar {
             width: 6px;
             height: 6px;
         }
+
         html::-webkit-scrollbar-track {
             background: rgba(11, 11, 11, 0.05);
         }
+
         .dark html::-webkit-scrollbar-track {
             background: rgba(255, 255, 255, 0.02);
         }
+
         html::-webkit-scrollbar-thumb {
             background: #C5A880;
             border-radius: 10px;
         }
-        
+
         /* Hide scrollbars for sliders */
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
-        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
         /* Glassmorphism Card style */
         .glass-panel {
             background: rgba(250, 248, 245, 0.7);
@@ -90,13 +104,14 @@
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(197, 168, 128, 0.15);
         }
+
         .dark .glass-panel {
             background: rgba(20, 20, 20, 0.7);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(197, 168, 128, 0.1);
         }
-        
+
         /* Advanced Scroll Reveal Engine Styles */
         .reveal {
             opacity: 0;
@@ -104,47 +119,48 @@
             transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
             transition-duration: 1.2s;
         }
-        
+
         .reveal-up {
-            transform: translateY(30px); /* Lower height for mobile convenience */
+            transform: translateY(30px);
+            /* Lower height for mobile convenience */
         }
-        
+
         .reveal-down {
             transform: translateY(-30px);
         }
-        
+
         .reveal-left {
             transform: translateX(-30px);
         }
-        
+
         .reveal-right {
             transform: translateX(30px);
         }
-        
+
         .reveal-scale {
             transform: scale(0.97);
         }
-        
+
         .reveal-blur {
             filter: blur(10px);
         }
-        
+
         .reveal-clip {
             clip-path: inset(0 100% 0 0);
             transition-duration: 1.4s;
         }
-        
+
         /* Active States */
         .reveal.is-visible {
             opacity: 1;
             transform: translate(0) scale(1);
             filter: blur(0);
         }
-        
+
         .reveal-clip.is-visible {
             clip-path: inset(0 0 0 0);
         }
-        
+
         /* Custom Pointer (Only for Desktop) */
         @media (min-width: 1024px) {
             .custom-cursor {
@@ -159,6 +175,7 @@
                 transition: width 0.3s, height 0.3s, background-color 0.3s, border-color 0.3s;
                 mix-blend-mode: difference;
             }
+
             .custom-cursor-hover {
                 width: 50px;
                 height: 50px;
@@ -166,26 +183,29 @@
                 border-color: transparent;
             }
         }
-        
+
         /* Shimmer effect for luxury glow */
         .shimmer {
             position: relative;
             overflow: hidden;
         }
+
         .shimmer::after {
             content: '';
             position: absolute;
-            top: 0; right: 0; bottom: 0; left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
             transform: translateX(-100%);
-            background-image: linear-gradient(
-                90deg,
-                rgba(255, 255, 255, 0) 0%,
-                rgba(255, 255, 255, 0.15) 20%,
-                rgba(255, 255, 255, 0.3) 60%,
-                rgba(255, 255, 255, 0) 100%
-            );
+            background-image: linear-gradient(90deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0.15) 20%,
+                    rgba(255, 255, 255, 0.3) 60%,
+                    rgba(255, 255, 255, 0) 100%);
             animation: shimmer 3s infinite;
         }
+
         @keyframes shimmer {
             100% {
                 transform: translateX(100%);
@@ -193,42 +213,57 @@
         }
     </style>
 </head>
-<body class="bg-lux-cream text-lux-obsidian dark:bg-lux-obsidian dark:text-lux-cream font-sans transition-colors duration-500 overflow-x-hidden selection:bg-lux-gold-500 selection:text-white pb-16 md:pb-0">
+
+<body
+    class="bg-lux-cream text-lux-obsidian dark:bg-lux-obsidian dark:text-lux-cream font-sans transition-colors duration-500 overflow-x-hidden selection:bg-lux-gold-500 selection:text-white pb-16 md:pb-0">
 
     <!-- Custom Cursor -->
     <div class="custom-cursor hidden lg:block" id="custom-cursor"></div>
 
     <!-- Header Navigation -->
-    <header class="fixed top-0 w-full z-50 transition-all duration-500 h-16 md:h-20 flex items-center justify-between px-4 md:px-16 border-b border-lux-gold-500/10 backdrop-blur-md bg-lux-cream/80 dark:bg-lux-obsidian/80" id="header-nav">
+    <header
+        class="fixed top-0 w-full z-50 transition-all duration-500 h-16 md:h-20 flex items-center justify-between px-4 md:px-16 border-b border-lux-gold-500/10 backdrop-blur-md bg-lux-cream/80 dark:bg-lux-obsidian/80"
+        id="header-nav">
         <!-- Logo -->
         <a href="#" class="flex items-center gap-1.5 md:gap-2 group">
-            <span class="font-serif text-lg md:text-2xl tracking-[0.2em] font-bold text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">ESTÉTICA</span>
-            <span class="text-[8px] md:text-[9px] uppercase tracking-[0.3em] text-lux-gold-500 border border-lux-gold-500/30 px-1.5 py-0.5 rounded-sm">LUXO</span>
+            <span
+                class="font-serif text-lg md:text-2xl tracking-[0.2em] font-bold text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">ESTÉTICA</span>
+            <span
+                class="text-[8px] md:text-[9px] uppercase tracking-[0.3em] text-lux-gold-500 border border-lux-gold-500/30 px-1.5 py-0.5 rounded-sm">LUXO</span>
         </a>
-        
+
         <!-- Desktop Nav Links -->
         <nav class="hidden md:flex items-center gap-10">
-            <a href="#branding" class="nav-link text-sm uppercase tracking-widest text-lux-obsidian/70 dark:text-lux-cream/70 hover:text-lux-gold-500 dark:hover:text-lux-gold-500 transition-colors">Branding</a>
-            <a href="#ensaio" class="nav-link text-sm uppercase tracking-widest text-lux-obsidian/70 dark:text-lux-cream/70 hover:text-lux-gold-500 dark:hover:text-lux-gold-500 transition-colors">Ensaios</a>
-            <a href="#audiovisual" class="nav-link text-sm uppercase tracking-widest text-lux-obsidian/70 dark:text-lux-cream/70 hover:text-lux-gold-500 dark:hover:text-lux-gold-500 transition-colors">Audiovisual</a>
-            <a href="#resultados" class="nav-link text-sm uppercase tracking-widest text-lux-obsidian/70 dark:text-lux-cream/70 hover:text-lux-gold-500 dark:hover:text-lux-gold-500 transition-colors">Resultados</a>
-            <a href="#visionario" class="nav-link text-sm uppercase tracking-widest text-lux-obsidian/70 dark:text-lux-cream/70 hover:text-lux-gold-500 dark:hover:text-lux-gold-500 transition-colors">A Agência</a>
+            <a href="#branding"
+                class="nav-link text-sm uppercase tracking-widest text-lux-obsidian/70 dark:text-lux-cream/70 hover:text-lux-gold-500 dark:hover:text-lux-gold-500 transition-colors">Branding</a>
+            <a href="#ensaio"
+                class="nav-link text-sm uppercase tracking-widest text-lux-obsidian/70 dark:text-lux-cream/70 hover:text-lux-gold-500 dark:hover:text-lux-gold-500 transition-colors">Ensaios</a>
+            <a href="#audiovisual"
+                class="nav-link text-sm uppercase tracking-widest text-lux-obsidian/70 dark:text-lux-cream/70 hover:text-lux-gold-500 dark:hover:text-lux-gold-500 transition-colors">Audiovisual</a>
+            <a href="#resultados"
+                class="nav-link text-sm uppercase tracking-widest text-lux-obsidian/70 dark:text-lux-cream/70 hover:text-lux-gold-500 dark:hover:text-lux-gold-500 transition-colors">Resultados</a>
+            <a href="#visionario"
+                class="nav-link text-sm uppercase tracking-widest text-lux-obsidian/70 dark:text-lux-cream/70 hover:text-lux-gold-500 dark:hover:text-lux-gold-500 transition-colors">A
+                Agência</a>
         </nav>
-        
+
         <!-- Action Buttons -->
         <div class="flex items-center gap-2 md:gap-4">
             <!-- Theme Toggle -->
-            <button id="theme-toggle" class="p-2 rounded-full border border-lux-gold-500/20 hover:border-lux-gold-500 text-lux-gold-500 hover:bg-lux-gold-500/10 transition-all cursor-pointer" aria-label="Alterar Tema">
+            <button id="theme-toggle"
+                class="p-2 rounded-full border border-lux-gold-500/20 hover:border-lux-gold-500 text-lux-gold-500 hover:bg-lux-gold-500/10 transition-all cursor-pointer"
+                aria-label="Alterar Tema">
                 <span class="material-symbols-outlined text-xl dark:hidden">dark_mode</span>
                 <span class="material-symbols-outlined text-xl hidden dark:inline">light_mode</span>
             </button>
-            
+
             <!-- Contact Button -->
-            <a href="#contato" class="hidden sm:inline-flex items-center gap-2 px-5 py-2 bg-lux-gold-500 hover:bg-lux-gold-600 text-white font-sans text-xs uppercase tracking-widest transition-all hover:shadow-lg hover:shadow-lux-gold-500/20">
+            <a href="#contato"
+                class="hidden sm:inline-flex items-center gap-2 px-5 py-2 bg-lux-gold-500 hover:bg-lux-gold-600 text-white font-sans text-xs uppercase tracking-widest transition-all hover:shadow-lg hover:shadow-lux-gold-500/20">
                 <span>Falar Conosco</span>
                 <span class="material-symbols-outlined text-sm">arrow_forward</span>
             </a>
-            
+
             <!-- Mobile Menu Toggle -->
             <button id="mobile-menu-btn" class="md:hidden p-2 text-lux-obsidian dark:text-lux-cream" aria-label="Menu">
                 <span class="material-symbols-outlined text-2xl">menu</span>
@@ -237,20 +272,33 @@
     </header>
 
     <!-- Mobile Side Navigation Menu -->
-    <div id="mobile-menu" class="fixed inset-0 z-40 bg-lux-obsidian translate-x-full transition-transform duration-500 flex flex-col justify-between p-6 pt-24 pb-8">
+    <div id="mobile-menu"
+        class="fixed inset-0 z-40 bg-lux-obsidian translate-x-full transition-transform duration-500 flex flex-col justify-between p-6 pt-24 pb-8">
         <nav class="flex flex-col gap-5">
-            <a href="#branding" class="mobile-nav-link font-serif text-2xl text-lux-cream hover:text-lux-gold-500 transition-colors">01. Branding & Design</a>
-            <a href="#ensaio" class="mobile-nav-link font-serif text-2xl text-lux-cream hover:text-lux-gold-500 transition-colors">02. Ensaios Fotográficos</a>
-            <a href="#audiovisual" class="mobile-nav-link font-serif text-2xl text-lux-cream hover:text-lux-gold-500 transition-colors">03. Produção Audiovisual</a>
-            <a href="#resultados" class="mobile-nav-link font-serif text-2xl text-lux-cream hover:text-lux-gold-500 transition-colors">04. Casos de Sucesso</a>
-            <a href="#visionario" class="mobile-nav-link font-serif text-2xl text-lux-cream hover:text-lux-gold-500 transition-colors">05. O Visionário</a>
+            <a href="#branding"
+                class="mobile-nav-link font-serif text-2xl text-lux-cream hover:text-lux-gold-500 transition-colors">01.
+                Branding & Design</a>
+            <a href="#ensaio"
+                class="mobile-nav-link font-serif text-2xl text-lux-cream hover:text-lux-gold-500 transition-colors">02.
+                Ensaios Fotográficos</a>
+            <a href="#audiovisual"
+                class="mobile-nav-link font-serif text-2xl text-lux-cream hover:text-lux-gold-500 transition-colors">03.
+                Produção Audiovisual</a>
+            <a href="#resultados"
+                class="mobile-nav-link font-serif text-2xl text-lux-cream hover:text-lux-gold-500 transition-colors">04.
+                Casos de Sucesso</a>
+            <a href="#visionario"
+                class="mobile-nav-link font-serif text-2xl text-lux-cream hover:text-lux-gold-500 transition-colors">05.
+                O Visionário</a>
         </nav>
-        
+
         <div class="flex flex-col gap-4 border-t border-lux-gold-500/10 pt-6">
-            <a href="#contato" class="w-full text-center py-3.5 bg-lux-gold-500 hover:bg-lux-gold-600 text-white font-sans uppercase tracking-widest text-xs transition-colors">
+            <a href="#contato"
+                class="w-full text-center py-3.5 bg-lux-gold-500 hover:bg-lux-gold-600 text-white font-sans uppercase tracking-widest text-xs transition-colors">
                 Consultoria Estratégica
             </a>
-            <p class="text-[10px] text-lux-cream/40 text-center tracking-wider">ESTÉTICA | Agência de Marketing Médico de Luxo</p>
+            <p class="text-[10px] text-lux-cream/40 text-center tracking-wider">ESTÉTICA | Agência de Marketing Médico
+                de Luxo</p>
         </div>
     </div>
 
@@ -258,56 +306,82 @@
     <main class="overflow-hidden">
 
         <!-- HERO SECTION -->
-        <section class="min-h-[90vh] md:min-h-screen flex flex-col justify-center relative pt-20 px-4 md:px-16 lg:px-24 bg-gradient-to-b from-lux-cream via-lux-cream to-lux-silk dark:from-lux-obsidian dark:via-lux-obsidian dark:to-lux-charcoal">
+        <section
+            class="min-h-[90vh] md:min-h-screen flex flex-col justify-center relative pt-20 px-4 md:px-16 lg:px-24 bg-gradient-to-b from-lux-cream via-lux-cream to-lux-silk dark:from-lux-obsidian dark:via-lux-obsidian dark:to-lux-charcoal">
             <!-- Ambient Glow Elements -->
-            <div class="absolute top-1/4 right-0 w-[250px] md:w-[400px] h-[250px] md:h-[400px] bg-lux-gold-500/10 dark:bg-lux-gold-500/5 blur-[80px] md:blur-[120px] rounded-full pointer-events-none"></div>
-            <div class="absolute bottom-10 left-10 w-[200px] md:w-[300px] h-[200px] md:h-[300px] bg-lux-gold-500/5 dark:bg-lux-gold-500/2 blur-[60px] md:blur-[100px] rounded-full pointer-events-none"></div>
+            <div
+                class="absolute top-1/4 right-0 w-[250px] md:w-[400px] h-[250px] md:h-[400px] bg-lux-gold-500/10 dark:bg-lux-gold-500/5 blur-[80px] md:blur-[120px] rounded-full pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-10 left-10 w-[200px] md:w-[300px] h-[200px] md:h-[300px] bg-lux-gold-500/5 dark:bg-lux-gold-500/2 blur-[60px] md:blur-[100px] rounded-full pointer-events-none">
+            </div>
 
-            <div class="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center relative z-10 py-8 md:py-12">
+            <div
+                class="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center relative z-10 py-8 md:py-12">
                 <!-- Text Intro -->
                 <div class="lg:col-span-7 flex flex-col justify-center text-left order-2 lg:order-1">
                     <div class="reveal reveal-up inline-flex items-center gap-3 mb-4 md:mb-6">
                         <span class="h-[1px] w-8 bg-lux-gold-500"></span>
-                        <span class="text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium text-lux-gold-500">Posicionamento Premium & High-Ticket</span>
+                        <span
+                            class="text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium text-lux-gold-500">Posicionamento
+                            Premium & High-Ticket</span>
                     </div>
-                    
-                    <h1 class="reveal reveal-up font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.15] text-lux-obsidian dark:text-lux-cream mb-4 md:mb-6" style="transition-delay: 100ms;">
-                        Eleve a sua <br class="hidden sm:inline"/>
-                        <span class="font-serif italic text-lux-gold-500">reputação médica</span> <br class="hidden sm:inline"/>
+
+                    <h1 class="reveal reveal-up font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.15] text-lux-obsidian dark:text-lux-cream mb-4 md:mb-6"
+                        style="transition-delay: 100ms;">
+                        Eleve a sua <br class="hidden sm:inline" />
+                        <span class="font-serif italic text-lux-gold-500">reputação médica</span> <br
+                            class="hidden sm:inline" />
                         ao nível da sua arte.
                     </h1>
-                    
-                    <p class="reveal reveal-up font-sans text-sm md:text-lg text-lux-obsidian/70 dark:text-lux-cream/70 max-w-xl mb-6 md:mb-10 leading-relaxed" style="transition-delay: 200ms;">
-                        Criamos ecossistemas de marketing exclusivos para cirurgiões plásticos, dermatologistas e clínicas estéticas de alto padrão. Atraia pacientes qualificados que valorizam a excelência, não o preço.
+
+                    <p class="reveal reveal-up font-sans text-sm md:text-lg text-lux-obsidian/70 dark:text-lux-cream/70 max-w-xl mb-6 md:mb-10 leading-relaxed"
+                        style="transition-delay: 200ms;">
+                        Criamos ecossistemas de marketing exclusivos para cirurgiões plásticos, dermatologistas e
+                        clínicas estéticas de alto padrão. Atraia pacientes qualificados que valorizam a excelência, não
+                        o preço.
                     </p>
-                    
-                    <div class="reveal reveal-up flex flex-col sm:flex-row gap-3 md:gap-4 items-stretch sm:items-center" style="transition-delay: 300ms;">
-                        <a href="#contato" class="px-6 md:px-8 py-3.5 md:py-4 bg-lux-obsidian text-lux-cream dark:bg-lux-cream dark:text-lux-obsidian hover:bg-lux-gold-500 dark:hover:bg-lux-gold-500 dark:hover:text-white hover:text-white text-xs uppercase tracking-[0.2em] font-semibold transition-all shadow-xl shadow-black/10 dark:shadow-white/5 text-center">
+
+                    <div class="reveal reveal-up flex flex-col sm:flex-row gap-3 md:gap-4 items-stretch sm:items-center"
+                        style="transition-delay: 300ms;">
+                        <a href="#contato"
+                            class="px-6 md:px-8 py-3.5 md:py-4 bg-lux-obsidian text-lux-cream dark:bg-lux-cream dark:text-lux-obsidian hover:bg-lux-gold-500 dark:hover:bg-lux-gold-500 dark:hover:text-white hover:text-white text-xs uppercase tracking-[0.2em] font-semibold transition-all shadow-xl shadow-black/10 dark:shadow-white/5 text-center">
                             Desenvolver Minha Marca
                         </a>
-                        <a href="#branding" class="group px-6 py-3.5 md:py-4 border border-lux-gold-500/30 hover:border-lux-gold-500 text-lux-gold-500 text-xs uppercase tracking-[0.2em] font-semibold transition-all flex items-center justify-center gap-2">
+                        <a href="#branding"
+                            class="group px-6 py-3.5 md:py-4 border border-lux-gold-500/30 hover:border-lux-gold-500 text-lux-gold-500 text-xs uppercase tracking-[0.2em] font-semibold transition-all flex items-center justify-center gap-2">
                             <span>Ver Portfólio</span>
-                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_downward</span>
+                            <span
+                                class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_downward</span>
                         </a>
                     </div>
                 </div>
 
                 <!-- Featured Mockup Video -->
                 <div class="lg:col-span-5 flex justify-center items-center relative order-1 lg:order-2 mb-4 lg:mb-0">
-                    <div class="reveal reveal-scale w-[240px] sm:w-[280px] md:w-[320px] aspect-[9/19] bg-lux-charcoal border-[6px] md:border-[8px] border-lux-gold-500/30 rounded-[2.2rem] md:rounded-[3rem] overflow-hidden shadow-2xl relative" style="transition-delay: 200ms;">
+                    <div class="reveal reveal-scale w-[240px] sm:w-[280px] md:w-[320px] aspect-[9/19] bg-lux-charcoal border-[6px] md:border-[8px] border-lux-gold-500/30 rounded-[2.2rem] md:rounded-[3rem] overflow-hidden shadow-2xl relative"
+                        style="transition-delay: 200ms;">
                         <!-- iPhone Notch Decorator -->
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 md:w-40 h-4 md:h-6 bg-lux-charcoal/90 border-b border-lux-gold-500/10 rounded-b-xl md:rounded-b-2xl z-30 flex justify-center items-end pb-0.5 md:pb-1">
+                        <div
+                            class="absolute top-0 left-1/2 -translate-x-1/2 w-28 md:w-40 h-4 md:h-6 bg-lux-charcoal/90 border-b border-lux-gold-500/10 rounded-b-xl md:rounded-b-2xl z-30 flex justify-center items-end pb-0.5 md:pb-1">
                             <div class="w-8 md:w-12 h-1 bg-black rounded-full mb-0.5 md:mb-1"></div>
                         </div>
-                        
+
                         <!-- Video overlay to simulate UI -->
-                        <div class="absolute inset-x-3 bottom-4 md:bottom-6 z-20 pointer-events-none flex flex-col gap-1.5 md:gap-2">
-                            <span class="text-[8px] md:text-[10px] uppercase tracking-widest text-lux-gold-200 bg-black/40 backdrop-blur-md px-2.5 py-0.5 self-start rounded-full">Audiovisual de Luxo</span>
-                            <h4 class="text-xs md:text-sm font-bold text-white text-shadow drop-shadow-md">Estética & Sofisticação Médica</h4>
-                            <p class="text-[9px] md:text-[10px] text-white/80 drop-shadow-md leading-snug">Cinematografia real gravada para posicionamento de alto valor no Instagram.</p>
+                        <div
+                            class="absolute inset-x-3 bottom-4 md:bottom-6 z-20 pointer-events-none flex flex-col gap-1.5 md:gap-2">
+                            <span
+                                class="text-[8px] md:text-[10px] uppercase tracking-widest text-lux-gold-200 bg-black/40 backdrop-blur-md px-2.5 py-0.5 self-start rounded-full">Audiovisual
+                                de Luxo</span>
+                            <h4 class="text-xs md:text-sm font-bold text-white text-shadow drop-shadow-md">Estética &
+                                Sofisticação Médica</h4>
+                            <p class="text-[9px] md:text-[10px] text-white/80 drop-shadow-md leading-snug">
+                                Cinematografia real gravada para posicionamento de alto valor no Instagram.</p>
                         </div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
-                        
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10">
+                        </div>
+
                         <!-- Video Playback -->
                         <video class="w-full h-full object-cover" autoplay loop muted playsinline>
                             <source src="img/videos profissionais 02.mp4" type="video/mp4">
@@ -316,42 +390,51 @@
                     </div>
 
                     <!-- Ambient golden circle decorator behind phone -->
-                    <div class="absolute -z-10 w-56 md:w-72 h-56 md:h-72 rounded-full border border-lux-gold-500/20 -right-4 -top-4 animate-[spin_60s_linear_infinite] hidden md:block">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-lux-gold-500"></div>
+                    <div
+                        class="absolute -z-10 w-56 md:w-72 h-56 md:h-72 rounded-full border border-lux-gold-500/20 -right-4 -top-4 animate-[spin_60s_linear_infinite] hidden md:block">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-lux-gold-500">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- LUXURY ACCENT STRIP -->
-        <section class="py-5 md:py-8 bg-lux-obsidian text-lux-gold-100 border-y border-lux-gold-500/20 overflow-hidden relative">
+        <section
+            class="py-5 md:py-8 bg-lux-obsidian text-lux-gold-100 border-y border-lux-gold-500/20 overflow-hidden relative">
             <div class="flex whitespace-nowrap animate-marquee select-none">
-                <div class="flex justify-around gap-8 md:gap-12 min-w-full uppercase text-[10px] md:text-xs tracking-[0.4em]">
-                    <span>Posicionamento de Luxo</span>
+                <div
+                    class="flex justify-around gap-8 md:gap-12 min-w-full uppercase text-[10px] md:text-xs tracking-[0.4em]">
+                    <span>Fotografia</span>
                     <span class="text-lux-gold-500">•</span>
                     <span>Marketing Médico Ético & Exclusivo</span>
                     <span class="text-lux-gold-500">•</span>
-                    <span>Branding Atemporal</span>
+                    <span>Conteúdo</span>
                     <span class="text-lux-gold-500">•</span>
-                    <span>Cinematografia de Alta Fidelidade</span>
-                    <span class="text-lux-gold-500">•</span>
+
                 </div>
-                <div class="flex justify-around gap-8 md:gap-12 min-w-full uppercase text-[10px] md:text-xs tracking-[0.4em]" aria-hidden="true">
-                    <span>Posicionamento de Luxo</span>
+                <div class="flex justify-around gap-8 md:gap-12 min-w-full uppercase text-[10px] md:text-xs tracking-[0.4em]"
+                    aria-hidden="true">
+                    <span>Fotografia</span>
                     <span class="text-lux-gold-500">•</span>
                     <span>Marketing Médico Ético & Exclusivo</span>
                     <span class="text-lux-gold-500">•</span>
-                    <span>Branding Atemporal</span>
+                    <span>Erik Giusti</span>
                     <span class="text-lux-gold-500">•</span>
-                    <span>Cinematografia de Alta Fidelidade</span>
-                    <span class="text-lux-gold-500">•</span>
+
                 </div>
             </div>
             <style>
                 @keyframes marquee {
-                    0% { transform: translateX(0%); }
-                    100% { transform: translateX(-100%); }
+                    0% {
+                        transform: translateX(0%);
+                    }
+
+                    100% {
+                        transform: translateX(-100%);
+                    }
                 }
+
                 .animate-marquee {
                     animation: marquee 25s linear infinite;
                 }
@@ -361,134 +444,209 @@
         <!-- SECTION: BRANDING & EDITORIAL CONTENT -->
         <section id="branding" class="py-16 md:py-24 px-4 md:px-16 lg:px-24 bg-lux-cream dark:bg-lux-obsidian relative">
             <div class="max-w-[1400px] mx-auto">
-                
+
                 <!-- Section Header -->
                 <div class="max-w-3xl mb-10 md:mb-16 text-left">
                     <div class="reveal reveal-up inline-flex items-center gap-3 mb-3 md:mb-4">
                         <span class="h-[1px] w-8 bg-lux-gold-500"></span>
-                        <span class="text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium text-lux-gold-500">Galeria Editorial</span>
+                        <span
+                            class="text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium text-lux-gold-500">Galeria
+                            Editorial</span>
                     </div>
-                    <h2 class="reveal reveal-up font-serif text-3xl md:text-5xl text-lux-obsidian dark:text-lux-cream leading-tight">
-                        Direção de Arte & Conteúdo de <span class="font-serif italic text-lux-gold-500">Alta Costura</span>
+                    <h2
+                        class="reveal reveal-up font-serif text-3xl md:text-5xl text-lux-obsidian dark:text-lux-cream leading-tight">
+                        Direção de Arte & Conteúdo de <span class="font-serif italic text-lux-gold-500">Alta
+                            Costura</span>
                     </h2>
-                    <p class="reveal reveal-up font-sans text-xs md:text-base text-lux-obsidian/70 dark:text-lux-cream/70 mt-3 md:mt-4 max-w-xl leading-relaxed">
-                        Design e estética impecáveis que comunicam ciência e beleza. Exibição de posts criados para construir autoridade, educar pacientes e destacar a sofisticação da clínica nas redes sociais.
+                    <p
+                        class="reveal reveal-up font-sans text-xs md:text-base text-lux-obsidian/70 dark:text-lux-cream/70 mt-3 md:mt-4 max-w-xl leading-relaxed">
+                        Design e estética impecáveis que comunicam ciência e beleza. Exibição de posts criados para
+                        construir autoridade, educar pacientes e destacar a sofisticação da clínica nas redes sociais.
                     </p>
                 </div>
 
                 <!-- Infinite Masonry / Premium Horizontal Carousel -->
                 <div class="reveal reveal-scale">
-                    <div class="flex gap-4 md:gap-6 overflow-x-auto hide-scrollbar snap-x cursor-grab active:cursor-grabbing pb-6 md:pb-8" id="content-carousel">
-                        
+                    <div class="flex gap-4 md:gap-6 overflow-x-auto hide-scrollbar snap-x cursor-grab active:cursor-grabbing pb-6 md:pb-8"
+                        id="content-carousel">
+
                         <!-- Conteúdo 02 -->
-                        <div class="carousel-item w-[240px] md:w-[320px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                        <div
+                            class="carousel-item w-[240px] md:w-[320px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
                             <div class="aspect-square overflow-hidden bg-lux-charcoal">
-                                <img src="img/conteudo02.png" alt="Direção de Conteúdo Premium 02" class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                                <img src="img/conteudo02.png" alt="Direção de Conteúdo Premium 02"
+                                    class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                    loading="lazy">
                             </div>
-                            <div class="p-4 md:p-5 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal">
-                                <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 mb-1">Estratégia Visual</p>
-                                <h4 class="font-serif text-sm md:text-base text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Fotografia Médica</h4>
+                            <div
+                                class="p-4 md:p-5 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal">
+                                <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 mb-1">
+                                    Estratégia Visual</p>
+                                <h4
+                                    class="font-serif text-sm md:text-base text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                    Fotografia Médica</h4>
                             </div>
                         </div>
 
                         <!-- Conteúdo 03 -->
-                        <div class="carousel-item w-[240px] md:w-[320px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                        <div
+                            class="carousel-item w-[240px] md:w-[320px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
                             <div class="aspect-square overflow-hidden bg-lux-charcoal">
-                                <img src="img/conteudo03.png" alt="Direção de Conteúdo Premium 03" class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                                <img src="img/conteudo03.png" alt="Direção de Conteúdo Premium 03"
+                                    class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                    loading="lazy">
                             </div>
-                            <div class="p-4 md:p-5 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal">
-                                <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 mb-1">Branding Editorial</p>
-                                <h4 class="font-serif text-sm md:text-base text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Identidade de Marca</h4>
+                            <div
+                                class="p-4 md:p-5 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal">
+                                <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 mb-1">
+                                    Branding Editorial</p>
+                                <h4
+                                    class="font-serif text-sm md:text-base text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                    Identidade de Marca</h4>
                             </div>
                         </div>
 
                         <!-- Conteúdo 04 -->
-                        <div class="carousel-item w-[240px] md:w-[320px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                        <div
+                            class="carousel-item w-[240px] md:w-[320px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
                             <div class="aspect-square overflow-hidden bg-lux-charcoal">
-                                <img src="img/conteudo04.png" alt="Direção de Conteúdo Premium 04" class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                                <img src="img/conteudo04.png" alt="Direção de Conteúdo Premium 04"
+                                    class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                    loading="lazy">
                             </div>
-                            <div class="p-4 md:p-5 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal">
-                                <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 mb-1">Minimalismo Clínico</p>
-                                <h4 class="font-serif text-sm md:text-base text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Posicionamento de Valor</h4>
+                            <div
+                                class="p-4 md:p-5 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal">
+                                <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 mb-1">
+                                    Minimalismo Clínico</p>
+                                <h4
+                                    class="font-serif text-sm md:text-base text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                    Posicionamento de Valor</h4>
                             </div>
                         </div>
 
                         <!-- Conteúdo 05 -->
-                        <div class="carousel-item w-[240px] md:w-[320px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                        <div
+                            class="carousel-item w-[240px] md:w-[320px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
                             <div class="aspect-square overflow-hidden bg-lux-charcoal">
-                                <img src="img/conteudo05.png" alt="Direção de Conteúdo Premium 05" class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                                <img src="img/conteudo05.png" alt="Direção de Conteúdo Premium 05"
+                                    class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                    loading="lazy">
                             </div>
-                            <div class="p-4 md:p-5 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal">
-                                <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 mb-1">Mídias de Luxo</p>
-                                <h4 class="font-serif text-sm md:text-base text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Storytelling de Autoridade</h4>
+                            <div
+                                class="p-4 md:p-5 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal">
+                                <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 mb-1">
+                                    Mídias de Luxo</p>
+                                <h4
+                                    class="font-serif text-sm md:text-base text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                    Storytelling de Autoridade</h4>
                             </div>
                         </div>
 
                         <!-- Conteúdo 06 -->
-                        <div class="carousel-item w-[240px] md:w-[320px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                        <div
+                            class="carousel-item w-[240px] md:w-[320px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
                             <div class="aspect-square overflow-hidden bg-lux-charcoal">
-                                <img src="img/conteudo06.png" alt="Direção de Conteúdo Premium 06" class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                                <img src="img/conteudo06.png" alt="Direção de Conteúdo Premium 06"
+                                    class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                    loading="lazy">
                             </div>
-                            <div class="p-4 md:p-5 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal">
-                                <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 mb-1">Harmonia Visual</p>
-                                <h4 class="font-serif text-sm md:text-base text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Curadoria Estética</h4>
+                            <div
+                                class="p-4 md:p-5 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal">
+                                <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 mb-1">
+                                    Harmonia Visual</p>
+                                <h4
+                                    class="font-serif text-sm md:text-base text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                    Curadoria Estética</h4>
                             </div>
                         </div>
 
                         <!-- Conteúdo 07 -->
-                        <div class="carousel-item w-[240px] md:w-[320px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                        <div
+                            class="carousel-item w-[240px] md:w-[320px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
                             <div class="aspect-square overflow-hidden bg-lux-charcoal">
-                                <img src="img/conteudo07.png" alt="Direção de Conteúdo Premium 07" class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                                <img src="img/conteudo07.png" alt="Direção de Conteúdo Premium 07"
+                                    class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                    loading="lazy">
                             </div>
-                            <div class="p-4 md:p-5 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal">
-                                <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 mb-1">Tipografia Exclusiva</p>
-                                <h4 class="font-serif text-sm md:text-base text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Design Editorial</h4>
+                            <div
+                                class="p-4 md:p-5 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal">
+                                <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 mb-1">
+                                    Tipografia Exclusiva</p>
+                                <h4
+                                    class="font-serif text-sm md:text-base text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                    Design Editorial</h4>
                             </div>
                         </div>
 
                         <!-- Conteúdo 08 -->
-                        <div class="carousel-item w-[240px] md:w-[320px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                        <div
+                            class="carousel-item w-[240px] md:w-[320px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
                             <div class="aspect-square overflow-hidden bg-lux-charcoal">
-                                <img src="img/conteudo08.png" alt="Direção de Conteúdo Premium 08" class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                                <img src="img/conteudo08.png" alt="Direção de Conteúdo Premium 08"
+                                    class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                    loading="lazy">
                             </div>
-                            <div class="p-4 md:p-5 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal">
-                                <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 mb-1">Conteúdo Educativo</p>
-                                <h4 class="font-serif text-sm md:text-base text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Conexão & Autoridade</h4>
+                            <div
+                                class="p-4 md:p-5 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal">
+                                <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 mb-1">
+                                    Conteúdo Educativo</p>
+                                <h4
+                                    class="font-serif text-sm md:text-base text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                    Conexão & Autoridade</h4>
                             </div>
                         </div>
 
                         <!-- Conteúdo 09 -->
-                        <div class="carousel-item w-[240px] md:w-[320px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                        <div
+                            class="carousel-item w-[240px] md:w-[320px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
                             <div class="aspect-square overflow-hidden bg-lux-charcoal">
-                                <img src="img/conteudo09.png" alt="Direção de Conteúdo Premium 09" class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                                <img src="img/conteudo09.png" alt="Direção de Conteúdo Premium 09"
+                                    class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                    loading="lazy">
                             </div>
-                            <div class="p-4 md:p-5 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal">
-                                <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 mb-1">Grid Estruturado</p>
-                                <h4 class="font-serif text-sm md:text-base text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Visual de Alta Conversão</h4>
+                            <div
+                                class="p-4 md:p-5 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal">
+                                <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 mb-1">
+                                    Grid Estruturado</p>
+                                <h4
+                                    class="font-serif text-sm md:text-base text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                    Visual de Alta Conversão</h4>
                             </div>
                         </div>
 
                         <!-- Conteúdo 10 -->
-                        <div class="carousel-item w-[240px] md:w-[320px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
+                        <div
+                            class="carousel-item w-[240px] md:w-[320px] shrink-0 snap-start bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group">
                             <div class="aspect-square overflow-hidden bg-lux-charcoal">
-                                <img src="img/conteudo10.png" alt="Direção de Conteúdo Premium 10" class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
+                                <img src="img/conteudo10.png" alt="Direção de Conteúdo Premium 10"
+                                    class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                    loading="lazy">
                             </div>
-                            <div class="p-4 md:p-5 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal">
-                                <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 mb-1">Linha Editorial</p>
-                                <h4 class="font-serif text-sm md:text-base text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Posicionamento Estético</h4>
+                            <div
+                                class="p-4 md:p-5 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal">
+                                <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 mb-1">
+                                    Linha Editorial</p>
+                                <h4
+                                    class="font-serif text-sm md:text-base text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                    Posicionamento Estético</h4>
                             </div>
                         </div>
 
                     </div>
-                    
+
                     <!-- Carousel Indicators & Navigation -->
                     <div class="flex items-center justify-between mt-4 md:mt-6">
-                        <span class="text-[10px] tracking-widest text-lux-gold-500/60 font-sans uppercase">Arraste para navegar</span>
+                        <span class="text-[10px] tracking-widest text-lux-gold-500/60 font-sans uppercase">Arraste para
+                            navegar</span>
                         <div class="flex gap-3">
-                            <button id="carousel-prev" class="p-2 border border-lux-gold-500/20 hover:border-lux-gold-500 text-lux-gold-500 hover:bg-lux-gold-500/10 transition-colors cursor-pointer" aria-label="Anterior">
+                            <button id="carousel-prev"
+                                class="p-2 border border-lux-gold-500/20 hover:border-lux-gold-500 text-lux-gold-500 hover:bg-lux-gold-500/10 transition-colors cursor-pointer"
+                                aria-label="Anterior">
                                 <span class="material-symbols-outlined text-xs md:text-sm">arrow_back</span>
                             </button>
-                            <button id="carousel-next" class="p-2 border border-lux-gold-500/20 hover:border-lux-gold-500 text-lux-gold-500 hover:bg-lux-gold-500/10 transition-colors cursor-pointer" aria-label="Próximo">
+                            <button id="carousel-next"
+                                class="p-2 border border-lux-gold-500/20 hover:border-lux-gold-500 text-lux-gold-500 hover:bg-lux-gold-500/10 transition-colors cursor-pointer"
+                                aria-label="Próximo">
                                 <span class="material-symbols-outlined text-xs md:text-sm">arrow_forward</span>
                             </button>
                         </div>
@@ -501,267 +659,397 @@
         <!-- INTRODUCTORY BRAND BANNER: QUOTE -->
         <section class="py-14 md:py-20 bg-lux-silk dark:bg-lux-charcoal border-y border-lux-gold-500/10">
             <div class="max-w-[1000px] mx-auto text-center px-4">
-                <span class="material-symbols-outlined text-3xl md:text-4xl text-lux-gold-500 mb-4 md:mb-6 block">format_quote</span>
-                <p class="reveal reveal-up font-serif text-lg sm:text-2xl md:text-3xl lg:text-4xl text-lux-obsidian dark:text-lux-cream leading-relaxed font-light">
-                    "O marketing de luxo não grita. Ele sussurra na mente da audiência correta, despertando o desejo pela excelência e o respeito absoluto pela sua trajetória médica."
+                <span
+                    class="material-symbols-outlined text-3xl md:text-4xl text-lux-gold-500 mb-4 md:mb-6 block">format_quote</span>
+                <p
+                    class="reveal reveal-up font-serif text-lg sm:text-2xl md:text-3xl lg:text-4xl text-lux-obsidian dark:text-lux-cream leading-relaxed font-light">
+                    "O marketing de luxo não grita. Ele sussurra na mente da audiência correta, despertando o desejo
+                    pela excelência e o respeito absoluto pela sua trajetória médica."
                 </p>
-                <p class="reveal reveal-up text-[10px] md:text-xs uppercase tracking-[0.3em] text-lux-gold-500 mt-4 md:mt-6 font-semibold" style="transition-delay: 200ms;">
+                <p class="reveal reveal-up text-[10px] md:text-xs uppercase tracking-[0.3em] text-lux-gold-500 mt-4 md:mt-6 font-semibold"
+                    style="transition-delay: 200ms;">
                     — Posicionamento & Autoridade
                 </p>
             </div>
         </section>
 
         <!-- SECTION: LUXURY PHOTOSHOOT (PORTRAIT GALLERY) -->
-        <section id="ensaio" class="py-16 md:py-24 px-4 md:px-16 lg:px-24 bg-lux-cream dark:bg-lux-obsidian relative border-b border-lux-gold-500/10">
-            <div class="absolute top-1/4 right-0 w-[300px] h-[300px] bg-lux-gold-500/5 blur-[90px] rounded-full pointer-events-none"></div>
+        <section id="ensaio"
+            class="py-16 md:py-24 px-4 md:px-16 lg:px-24 bg-lux-cream dark:bg-lux-obsidian relative border-b border-lux-gold-500/10">
+            <div
+                class="absolute top-1/4 right-0 w-[300px] h-[300px] bg-lux-gold-500/5 blur-[90px] rounded-full pointer-events-none">
+            </div>
 
             <div class="max-w-[1400px] mx-auto">
-                
+
                 <!-- Section Header -->
                 <div class="max-w-3xl mb-10 md:mb-16 text-left">
                     <div class="reveal reveal-up inline-flex items-center gap-3 mb-3 md:mb-4">
                         <span class="h-[1px] w-8 bg-lux-gold-500"></span>
-                        <span class="text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium text-lux-gold-500">Direção de Imagem</span>
+                        <span
+                            class="text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium text-lux-gold-500">Direção
+                            de Imagem</span>
                     </div>
-                    <h2 class="reveal reveal-up font-serif text-3xl md:text-5xl text-lux-obsidian dark:text-lux-cream leading-tight">
+                    <h2
+                        class="reveal reveal-up font-serif text-3xl md:text-5xl text-lux-obsidian dark:text-lux-cream leading-tight">
                         Direção de Imagem & <span class="font-serif italic text-lux-gold-500">Ensaios de Luxo</span>
                     </h2>
-                    <p class="reveal reveal-up font-sans text-xs md:text-base text-lux-obsidian/70 dark:text-lux-cream/70 mt-3 md:mt-4 max-w-xl leading-relaxed">
-                        Retratos de alta fidelidade que revelam a autoridade e a essência humana de profissionais médicos de excelência. Criamos e dirigimos ensaios fotográficos exclusivos que constroem conexões imediatas de alto padrão.
+                    <p
+                        class="reveal reveal-up font-sans text-xs md:text-base text-lux-obsidian/70 dark:text-lux-cream/70 mt-3 md:mt-4 max-w-xl leading-relaxed">
+                        Retratos de alta fidelidade que revelam a autoridade e a essência humana de profissionais
+                        médicos de excelência. Criamos e dirigimos ensaios fotográficos exclusivos que constroem
+                        conexões imediatas de alto padrão.
                     </p>
                 </div>
 
                 <!-- Photoshoot 3D Coverflow Carousel -->
-                <div class="reveal reveal-scale relative w-full h-[380px] sm:h-[480px] flex items-center justify-center overflow-hidden sm:overflow-visible" id="photoshoot-carousel">
-                        
-                        <!-- Slide 01 -->
-                        <div class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
-                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
-                                <img src="img/ensaio-fotografico-01.JPEG" alt="Retrato de Luxo 01" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
-                            </div>
-                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
-                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
-                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Posicionamento Nobre</h4>
-                            </div>
-                        </div>
+                <div class="reveal reveal-scale relative w-full h-[380px] sm:h-[480px] flex items-center justify-center overflow-hidden sm:overflow-visible"
+                    id="photoshoot-carousel">
 
-                        <!-- Slide 02 -->
-                        <div class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
-                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
-                                <img src="img/ensaio-fotografico-02.JPEG" alt="Retrato de Luxo 02" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
-                            </div>
-                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
-                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
-                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Presença Executiva</h4>
-                            </div>
+                    <!-- Slide 01 -->
+                    <div
+                        class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
+                        <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                            <img src="img/ensaio-fotografico-01.JPEG" alt="Retrato de Luxo 01"
+                                class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                loading="lazy">
                         </div>
-
-                        <!-- Slide 03 -->
-                        <div class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
-                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
-                                <img src="img/ensaio-fotografico-03.JPEG" alt="Retrato de Luxo 03" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
-                            </div>
-                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
-                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
-                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Expressão Médica</h4>
-                            </div>
+                        <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                            <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de
+                                Autoridade</p>
+                            <h4
+                                class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                Posicionamento Nobre</h4>
                         </div>
-
-                        <!-- Slide 04 -->
-                        <div class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
-                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
-                                <img src="img/ensaio-fotografico-04.JPEG" alt="Retrato de Luxo 04" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
-                            </div>
-                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
-                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
-                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Sofisticação Visual</h4>
-                            </div>
-                        </div>
-
-                        <!-- Slide 05 -->
-                        <div class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
-                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
-                                <img src="img/ensaio-fotografico-05.JPEG" alt="Retrato de Luxo 05" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
-                            </div>
-                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
-                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
-                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Essência Científica</h4>
-                            </div>
-                        </div>
-
-                        <!-- Slide 06 -->
-                        <div class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
-                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
-                                <img src="img/ensaio-fotografico-06.JPEG" alt="Retrato de Luxo 06" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
-                            </div>
-                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
-                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
-                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Minimalismo Profissional</h4>
-                            </div>
-                        </div>
-
-                        <!-- Slide 07 -->
-                        <div class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
-                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
-                                <img src="img/ensaio-fotografico-07.JPEG" alt="Retrato de Luxo 07" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
-                            </div>
-                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
-                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
-                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Retrato Corporativo</h4>
-                            </div>
-                        </div>
-
-                        <!-- Slide 08 -->
-                        <div class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
-                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
-                                <img src="img/ensaio-fotografico-08.JPEG" alt="Retrato de Luxo 08" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
-                            </div>
-                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
-                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
-                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Confiança e Credibilidade</h4>
-                            </div>
-                        </div>
-
-                        <!-- Slide 09 -->
-                        <div class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
-                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
-                                <img src="img/ensaio-fotografico-09.JPEG" alt="Retrato de Luxo 09" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
-                            </div>
-                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
-                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
-                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Elegância Clínica</h4>
-                            </div>
-                        </div>
-
-                        <!-- Slide 10 -->
-                        <div class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
-                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
-                                <img src="img/ensaio-fotografico-10.JPEG" alt="Retrato de Luxo 10" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
-                            </div>
-                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
-                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
-                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Posicionamento de Valor</h4>
-                            </div>
-                        </div>
-
-                        <!-- Slide 12 -->
-                        <div class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
-                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
-                                <img src="img/ensaio-fotografico-12.JPEG" alt="Retrato de Luxo 12" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
-                            </div>
-                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
-                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
-                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Estilo & Sofisticação</h4>
-                            </div>
-                        </div>
-
-                        <!-- Slide 13 -->
-                        <div class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
-                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
-                                <img src="img/ensaio-fotografico-13.JPEG" alt="Retrato de Luxo 13" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
-                            </div>
-                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
-                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
-                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Produção Executiva</h4>
-                            </div>
-                        </div>
-
-                        <!-- Slide 14 -->
-                        <div class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
-                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
-                                <img src="img/ensaio-fotografico-14.JPEG" alt="Retrato de Luxo 14" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
-                            </div>
-                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
-                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
-                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Médico Visionário</h4>
-                            </div>
-                        </div>
-
-                        <!-- Slide 15 -->
-                        <div class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
-                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
-                                <img src="img/ensaio-fotografico-15.JPEG" alt="Retrato de Luxo 15" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
-                            </div>
-                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
-                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
-                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Expressão e Arte</h4>
-                            </div>
-                        </div>
-
-                        <!-- Slide 16 -->
-                        <div class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
-                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
-                                <img src="img/ensaio-fotografico-16.JPEG" alt="Retrato de Luxo 16" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
-                            </div>
-                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
-                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
-                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Profissionalismo Estético</h4>
-                            </div>
-                        </div>
-
-                        <!-- Slide 17 -->
-                        <div class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
-                            <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
-                                <img src="img/ensaio-fotografico-17.JPEG" alt="Retrato de Luxo 17" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" loading="lazy">
-                            </div>
-                            <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
-                                <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de Autoridade</p>
-                                <h4 class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Identidade Profissional</h4>
-                            </div>
-                        </div>
-
                     </div>
-                    
-                    <!-- Carousel Indicators & Navigation -->
-                    <div class="flex items-center justify-between mt-4 md:mt-6">
-                        <span class="text-[10px] tracking-widest text-lux-gold-500/60 font-sans uppercase">Arraste para navegar</span>
-                        <div class="flex gap-3">
-                            <button id="photoshoot-prev" class="p-2 border border-lux-gold-500/20 hover:border-lux-gold-500 text-lux-gold-500 hover:bg-lux-gold-500/10 transition-colors cursor-pointer" aria-label="Anterior">
-                                <span class="material-symbols-outlined text-xs md:text-sm">arrow_back</span>
-                            </button>
-                            <button id="photoshoot-next" class="p-2 border border-lux-gold-500/20 hover:border-lux-gold-500 text-lux-gold-500 hover:bg-lux-gold-500/10 transition-colors cursor-pointer" aria-label="Próximo">
-                                <span class="material-symbols-outlined text-xs md:text-sm">arrow_forward</span>
-                            </button>
+
+                    <!-- Slide 02 -->
+                    <div
+                        class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
+                        <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                            <img src="img/ensaio-fotografico-02.JPEG" alt="Retrato de Luxo 02"
+                                class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                loading="lazy">
                         </div>
+                        <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                            <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de
+                                Autoridade</p>
+                            <h4
+                                class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                Presença Executiva</h4>
+                        </div>
+                    </div>
+
+                    <!-- Slide 03 -->
+                    <div
+                        class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
+                        <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                            <img src="img/ensaio-fotografico-03.JPEG" alt="Retrato de Luxo 03"
+                                class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                loading="lazy">
+                        </div>
+                        <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                            <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de
+                                Autoridade</p>
+                            <h4
+                                class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                Expressão Médica</h4>
+                        </div>
+                    </div>
+
+                    <!-- Slide 04 -->
+                    <div
+                        class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
+                        <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                            <img src="img/ensaio-fotografico-04.JPEG" alt="Retrato de Luxo 04"
+                                class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                loading="lazy">
+                        </div>
+                        <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                            <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de
+                                Autoridade</p>
+                            <h4
+                                class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                Sofisticação Visual</h4>
+                        </div>
+                    </div>
+
+                    <!-- Slide 05 -->
+                    <div
+                        class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
+                        <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                            <img src="img/ensaio-fotografico-05.JPEG" alt="Retrato de Luxo 05"
+                                class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                loading="lazy">
+                        </div>
+                        <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                            <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de
+                                Autoridade</p>
+                            <h4
+                                class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                Essência Científica</h4>
+                        </div>
+                    </div>
+
+                    <!-- Slide 06 -->
+                    <div
+                        class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
+                        <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                            <img src="img/ensaio-fotografico-06.JPEG" alt="Retrato de Luxo 06"
+                                class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                loading="lazy">
+                        </div>
+                        <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                            <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de
+                                Autoridade</p>
+                            <h4
+                                class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                Minimalismo Profissional</h4>
+                        </div>
+                    </div>
+
+                    <!-- Slide 07 -->
+                    <div
+                        class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
+                        <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                            <img src="img/ensaio-fotografico-07.JPEG" alt="Retrato de Luxo 07"
+                                class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                loading="lazy">
+                        </div>
+                        <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                            <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de
+                                Autoridade</p>
+                            <h4
+                                class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                Retrato Corporativo</h4>
+                        </div>
+                    </div>
+
+                    <!-- Slide 08 -->
+                    <div
+                        class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
+                        <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                            <img src="img/ensaio-fotografico-08.JPEG" alt="Retrato de Luxo 08"
+                                class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                loading="lazy">
+                        </div>
+                        <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                            <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de
+                                Autoridade</p>
+                            <h4
+                                class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                Confiança e Credibilidade</h4>
+                        </div>
+                    </div>
+
+                    <!-- Slide 09 -->
+                    <div
+                        class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
+                        <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                            <img src="img/ensaio-fotografico-09.JPEG" alt="Retrato de Luxo 09"
+                                class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                loading="lazy">
+                        </div>
+                        <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                            <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de
+                                Autoridade</p>
+                            <h4
+                                class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                Elegância Clínica</h4>
+                        </div>
+                    </div>
+
+                    <!-- Slide 10 -->
+                    <div
+                        class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
+                        <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                            <img src="img/ensaio-fotografico-10.JPEG" alt="Retrato de Luxo 10"
+                                class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                loading="lazy">
+                        </div>
+                        <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                            <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de
+                                Autoridade</p>
+                            <h4
+                                class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                Posicionamento de Valor</h4>
+                        </div>
+                    </div>
+
+                    <!-- Slide 12 -->
+                    <div
+                        class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
+                        <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                            <img src="img/ensaio-fotografico-12.JPEG" alt="Retrato de Luxo 12"
+                                class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                loading="lazy">
+                        </div>
+                        <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                            <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de
+                                Autoridade</p>
+                            <h4
+                                class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                Estilo & Sofisticação</h4>
+                        </div>
+                    </div>
+
+                    <!-- Slide 13 -->
+                    <div
+                        class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
+                        <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                            <img src="img/ensaio-fotografico-13.JPEG" alt="Retrato de Luxo 13"
+                                class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                loading="lazy">
+                        </div>
+                        <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                            <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de
+                                Autoridade</p>
+                            <h4
+                                class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                Produção Executiva</h4>
+                        </div>
+                    </div>
+
+                    <!-- Slide 14 -->
+                    <div
+                        class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
+                        <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                            <img src="img/ensaio-fotografico-14.JPEG" alt="Retrato de Luxo 14"
+                                class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                loading="lazy">
+                        </div>
+                        <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                            <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de
+                                Autoridade</p>
+                            <h4
+                                class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                Médico Visionário</h4>
+                        </div>
+                    </div>
+
+                    <!-- Slide 15 -->
+                    <div
+                        class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
+                        <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                            <img src="img/ensaio-fotografico-15.JPEG" alt="Retrato de Luxo 15"
+                                class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                loading="lazy">
+                        </div>
+                        <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                            <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de
+                                Autoridade</p>
+                            <h4
+                                class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                Expressão e Arte</h4>
+                        </div>
+                    </div>
+
+                    <!-- Slide 16 -->
+                    <div
+                        class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
+                        <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                            <img src="img/ensaio-fotografico-16.JPEG" alt="Retrato de Luxo 16"
+                                class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                loading="lazy">
+                        </div>
+                        <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                            <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de
+                                Autoridade</p>
+                            <h4
+                                class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                Profissionalismo Estético</h4>
+                        </div>
+                    </div>
+
+                    <!-- Slide 17 -->
+                    <div
+                        class="carousel-item absolute inset-0 m-auto w-[75vw] sm:w-[320px] aspect-[3/4] bg-lux-silk dark:bg-lux-charcoal border border-lux-gold-500/10 overflow-hidden relative group transition-all duration-700 ease-in-out opacity-0 scale-75 pointer-events-none z-0">
+                        <div class="aspect-[3/4] overflow-hidden bg-lux-charcoal">
+                            <img src="img/ensaio-fotografico-17.JPEG" alt="Retrato de Luxo 17"
+                                class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                loading="lazy">
+                        </div>
+                        <div class="p-4 border-t border-lux-gold-500/10 bg-lux-cream/90 dark:bg-lux-charcoal/90">
+                            <p class="text-[9px] uppercase tracking-widest text-lux-gold-500 mb-0.5">Retratos de
+                                Autoridade</p>
+                            <h4
+                                class="font-serif text-sm text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                Identidade Profissional</h4>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Carousel Indicators & Navigation -->
+                <div class="flex items-center justify-between mt-4 md:mt-6">
+                    <span class="text-[10px] tracking-widest text-lux-gold-500/60 font-sans uppercase">Arraste para
+                        navegar</span>
+                    <div class="flex gap-3">
+                        <button id="photoshoot-prev"
+                            class="p-2 border border-lux-gold-500/20 hover:border-lux-gold-500 text-lux-gold-500 hover:bg-lux-gold-500/10 transition-colors cursor-pointer"
+                            aria-label="Anterior">
+                            <span class="material-symbols-outlined text-xs md:text-sm">arrow_back</span>
+                        </button>
+                        <button id="photoshoot-next"
+                            class="p-2 border border-lux-gold-500/20 hover:border-lux-gold-500 text-lux-gold-500 hover:bg-lux-gold-500/10 transition-colors cursor-pointer"
+                            aria-label="Próximo">
+                            <span class="material-symbols-outlined text-xs md:text-sm">arrow_forward</span>
+                        </button>
                     </div>
                 </div>
+            </div>
 
             </div>
         </section>
 
         <!-- SECTION: CINEMATIC REELS (VIDEO SHOWCASE) -->
-        <section id="audiovisual" class="py-16 md:py-24 px-4 md:px-16 lg:px-24 bg-lux-cream dark:bg-lux-obsidian relative">
+        <section id="audiovisual"
+            class="py-16 md:py-24 px-4 md:px-16 lg:px-24 bg-lux-cream dark:bg-lux-obsidian relative">
             <div class="max-w-[1400px] mx-auto">
-                
+
                 <!-- Section Header -->
                 <div class="max-w-3xl mb-10 md:mb-16 text-left">
                     <div class="reveal reveal-up inline-flex items-center gap-3 mb-3 md:mb-4">
                         <span class="h-[1px] w-8 bg-lux-gold-500"></span>
-                        <span class="text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium text-lux-gold-500">Audiovisual Cinematográfico</span>
+                        <span
+                            class="text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium text-lux-gold-500">Audiovisual
+                            Cinematográfico</span>
                     </div>
-                    <h2 class="reveal reveal-up font-serif text-3xl md:text-5xl text-lux-obsidian dark:text-lux-cream leading-tight">
+                    <h2
+                        class="reveal reveal-up font-serif text-3xl md:text-5xl text-lux-obsidian dark:text-lux-cream leading-tight">
                         Direção de Vídeo e <span class="font-serif italic text-lux-gold-500">Produções Cinematic</span>
                     </h2>
-                    <p class="reveal reveal-up font-sans text-xs md:text-base text-lux-obsidian/70 dark:text-lux-cream/70 mt-3 md:mt-4 max-w-xl leading-relaxed">
-                        A beleza de sua arte clínica precisa ser contada com fidelidade. Capturamos a delicadeza dos procedimentos, a seriedade da sua clínica e a elegância dos atendimentos em produções premium.
+                    <p
+                        class="reveal reveal-up font-sans text-xs md:text-base text-lux-obsidian/70 dark:text-lux-cream/70 mt-3 md:mt-4 max-w-xl leading-relaxed">
+                        A beleza de sua arte clínica precisa ser contada com fidelidade. Capturamos a delicadeza dos
+                        procedimentos, a seriedade da sua clínica e a elegância dos atendimentos em produções premium.
                     </p>
                 </div>
 
                 <!-- Video Reels Grid (Responsive Horizontal Carousel on Mobile, Grid on Desktop) -->
                 <div class="reveal reveal-scale">
                     <!-- Carousel Container on Mobile, Grid layout on md+ screen -->
-                    <div class="flex gap-4 md:gap-8 overflow-x-auto hide-scrollbar snap-x cursor-grab active:cursor-grabbing pb-6 md:grid md:grid-cols-4 md:overflow-visible" id="video-carousel">
-                        
+                    <div class="flex gap-4 md:gap-8 overflow-x-auto hide-scrollbar snap-x cursor-grab active:cursor-grabbing pb-6 md:grid md:grid-cols-4 md:overflow-visible"
+                        id="video-carousel">
+
                         <!-- Video Card 1 -->
-                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-auto shrink-0 snap-start relative group rounded-[1.2rem] md:rounded-[1.5rem] overflow-hidden bg-lux-charcoal border border-lux-gold-500/10 shadow-lg aspect-[9/16]" style="transition-delay: 0ms;">
-                            <video class="lazy-video w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" loop muted playsinline>
+                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-auto shrink-0 snap-start relative group rounded-[1.2rem] md:rounded-[1.5rem] overflow-hidden bg-lux-charcoal border border-lux-gold-500/10 shadow-lg aspect-[9/16]"
+                            style="transition-delay: 0ms;">
+                            <video
+                                class="lazy-video w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700"
+                                loop muted playsinline>
                                 <source src="img/videos profssionais 01.MP4" type="video/mp4">
                             </video>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-6 z-10">
-                                <span class="text-[8px] md:text-[9px] uppercase tracking-[0.22em] text-lux-gold-300 font-semibold mb-0.5 md:mb-1">PRODUÇÃO 01</span>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-6 z-10">
+                                <span
+                                    class="text-[8px] md:text-[9px] uppercase tracking-[0.22em] text-lux-gold-300 font-semibold mb-0.5 md:mb-1">PRODUÇÃO
+                                    01</span>
                                 <h4 class="font-serif text-sm md:text-lg text-white">Cinematografia Médica</h4>
-                                <p class="text-[10px] md:text-xs text-white/70 mt-1 leading-snug">Iluminação de estúdio e foco no cuidado cirúrgico.</p>
-                                <button class="video-play-btn mt-3 md:mt-4 self-start flex items-center gap-2 text-[9px] md:text-[10px] text-lux-gold-300 hover:text-white uppercase tracking-widest font-bold">
+                                <p class="text-[10px] md:text-xs text-white/70 mt-1 leading-snug">Iluminação de estúdio
+                                    e foco no cuidado cirúrgico.</p>
+                                <button
+                                    class="video-play-btn mt-3 md:mt-4 self-start flex items-center gap-2 text-[9px] md:text-[10px] text-lux-gold-300 hover:text-white uppercase tracking-widest font-bold">
                                     <span class="material-symbols-outlined text-xs md:text-sm">play_arrow</span>
                                     <span>Reproduzir</span>
                                 </button>
@@ -769,15 +1057,23 @@
                         </div>
 
                         <!-- Video Card 2 -->
-                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-auto shrink-0 snap-start relative group rounded-[1.2rem] md:rounded-[1.5rem] overflow-hidden bg-lux-charcoal border border-lux-gold-500/10 shadow-lg aspect-[9/16]" style="transition-delay: 100ms;">
-                            <video class="lazy-video w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" loop muted playsinline>
+                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-auto shrink-0 snap-start relative group rounded-[1.2rem] md:rounded-[1.5rem] overflow-hidden bg-lux-charcoal border border-lux-gold-500/10 shadow-lg aspect-[9/16]"
+                            style="transition-delay: 100ms;">
+                            <video
+                                class="lazy-video w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700"
+                                loop muted playsinline>
                                 <source src="img/videos profissionais 02.mp4" type="video/mp4">
                             </video>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-6 z-10">
-                                <span class="text-[8px] md:text-[9px] uppercase tracking-[0.22em] text-lux-gold-300 font-semibold mb-0.5 md:mb-1">PRODUÇÃO 02</span>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-6 z-10">
+                                <span
+                                    class="text-[8px] md:text-[9px] uppercase tracking-[0.22em] text-lux-gold-300 font-semibold mb-0.5 md:mb-1">PRODUÇÃO
+                                    02</span>
                                 <h4 class="font-serif text-sm md:text-lg text-white">Procedimentos Clínicos</h4>
-                                <p class="text-[10px] md:text-xs text-white/70 mt-1 leading-snug">A sutileza da estética e alta performance capturada.</p>
-                                <button class="video-play-btn mt-3 md:mt-4 self-start flex items-center gap-2 text-[9px] md:text-[10px] text-lux-gold-300 hover:text-white uppercase tracking-widest font-bold">
+                                <p class="text-[10px] md:text-xs text-white/70 mt-1 leading-snug">A sutileza da estética
+                                    e alta performance capturada.</p>
+                                <button
+                                    class="video-play-btn mt-3 md:mt-4 self-start flex items-center gap-2 text-[9px] md:text-[10px] text-lux-gold-300 hover:text-white uppercase tracking-widest font-bold">
                                     <span class="material-symbols-outlined text-xs md:text-sm">play_arrow</span>
                                     <span>Reproduzir</span>
                                 </button>
@@ -785,15 +1081,23 @@
                         </div>
 
                         <!-- Video Card 3 -->
-                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-auto shrink-0 snap-start relative group rounded-[1.2rem] md:rounded-[1.5rem] overflow-hidden bg-lux-charcoal border border-lux-gold-500/10 shadow-lg aspect-[9/16]" style="transition-delay: 200ms;">
-                            <video class="lazy-video w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" loop muted playsinline>
+                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-auto shrink-0 snap-start relative group rounded-[1.2rem] md:rounded-[1.5rem] overflow-hidden bg-lux-charcoal border border-lux-gold-500/10 shadow-lg aspect-[9/16]"
+                            style="transition-delay: 200ms;">
+                            <video
+                                class="lazy-video w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700"
+                                loop muted playsinline>
                                 <source src="img/videos profissionais 03.MP4" type="video/mp4">
                             </video>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-6 z-10">
-                                <span class="text-[8px] md:text-[9px] uppercase tracking-[0.22em] text-lux-gold-300 font-semibold mb-0.5 md:mb-1">PRODUÇÃO 03</span>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-6 z-10">
+                                <span
+                                    class="text-[8px] md:text-[9px] uppercase tracking-[0.22em] text-lux-gold-300 font-semibold mb-0.5 md:mb-1">PRODUÇÃO
+                                    03</span>
                                 <h4 class="font-serif text-sm md:text-lg text-white">A Autoridade Médica</h4>
-                                <p class="text-[10px] md:text-xs text-white/70 mt-1 leading-snug">Retratos cinemáticos que constroem confiança imediata.</p>
-                                <button class="video-play-btn mt-3 md:mt-4 self-start flex items-center gap-2 text-[9px] md:text-[10px] text-lux-gold-300 hover:text-white uppercase tracking-widest font-bold">
+                                <p class="text-[10px] md:text-xs text-white/70 mt-1 leading-snug">Retratos cinemáticos
+                                    que constroem confiança imediata.</p>
+                                <button
+                                    class="video-play-btn mt-3 md:mt-4 self-start flex items-center gap-2 text-[9px] md:text-[10px] text-lux-gold-300 hover:text-white uppercase tracking-widest font-bold">
                                     <span class="material-symbols-outlined text-xs md:text-sm">play_arrow</span>
                                     <span>Reproduzir</span>
                                 </button>
@@ -801,15 +1105,23 @@
                         </div>
 
                         <!-- Video Card 4 -->
-                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-auto shrink-0 snap-start relative group rounded-[1.2rem] md:rounded-[1.5rem] overflow-hidden bg-lux-charcoal border border-lux-gold-500/10 shadow-lg aspect-[9/16]" style="transition-delay: 300ms;">
-                            <video class="lazy-video w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" loop muted playsinline>
+                        <div class="carousel-item w-[220px] sm:w-[260px] md:w-auto shrink-0 snap-start relative group rounded-[1.2rem] md:rounded-[1.5rem] overflow-hidden bg-lux-charcoal border border-lux-gold-500/10 shadow-lg aspect-[9/16]"
+                            style="transition-delay: 300ms;">
+                            <video
+                                class="lazy-video w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700"
+                                loop muted playsinline>
                                 <source src="img/videos profissionais 04.MP4" type="video/mp4">
                             </video>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-6 z-10">
-                                <span class="text-[8px] md:text-[9px] uppercase tracking-[0.22em] text-lux-gold-300 font-semibold mb-0.5 md:mb-1">PRODUÇÃO 04</span>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-6 z-10">
+                                <span
+                                    class="text-[8px] md:text-[9px] uppercase tracking-[0.22em] text-lux-gold-300 font-semibold mb-0.5 md:mb-1">PRODUÇÃO
+                                    04</span>
                                 <h4 class="font-serif text-sm md:text-lg text-white">Ambiente Clínico</h4>
-                                <p class="text-[10px] md:text-xs text-white/70 mt-1 leading-snug">Visual do consultório transmitindo assepsia e luxo.</p>
-                                <button class="video-play-btn mt-3 md:mt-4 self-start flex items-center gap-2 text-[9px] md:text-[10px] text-lux-gold-300 hover:text-white uppercase tracking-widest font-bold">
+                                <p class="text-[10px] md:text-xs text-white/70 mt-1 leading-snug">Visual do consultório
+                                    transmitindo assepsia e luxo.</p>
+                                <button
+                                    class="video-play-btn mt-3 md:mt-4 self-start flex items-center gap-2 text-[9px] md:text-[10px] text-lux-gold-300 hover:text-white uppercase tracking-widest font-bold">
                                     <span class="material-symbols-outlined text-xs md:text-sm">play_arrow</span>
                                     <span>Reproduzir</span>
                                 </button>
@@ -817,10 +1129,11 @@
                         </div>
 
                     </div>
-                    
+
                     <!-- Swipe indicator (Only visible on mobile) -->
                     <div class="flex items-center justify-between mt-3 md:hidden">
-                        <span class="text-[9px] tracking-widest text-lux-gold-500/60 font-sans uppercase">Deslize para ver mais vídeos</span>
+                        <span class="text-[9px] tracking-widest text-lux-gold-500/60 font-sans uppercase">Deslize para
+                            ver mais vídeos</span>
                         <div class="w-8 h-[1px] bg-lux-gold-500/30"></div>
                     </div>
                 </div>
@@ -829,124 +1142,178 @@
         </section>
 
         <!-- SECTION: MARKETING RESULTS & CLINICAL CASES -->
-        <section id="resultados" class="py-16 md:py-24 px-4 md:px-16 lg:px-24 bg-lux-cream dark:bg-lux-obsidian relative">
+        <section id="resultados"
+            class="py-16 md:py-24 px-4 md:px-16 lg:px-24 bg-lux-cream dark:bg-lux-obsidian relative">
             <!-- Ambient golden light -->
-            <div class="absolute top-1/2 left-0 w-[300px] md:w-[400px] h-[300px] md:h-[400px] bg-lux-gold-500/5 dark:bg-lux-gold-500/2 blur-[100px] md:blur-[150px] rounded-full pointer-events-none"></div>
+            <div
+                class="absolute top-1/2 left-0 w-[300px] md:w-[400px] h-[300px] md:h-[400px] bg-lux-gold-500/5 dark:bg-lux-gold-500/2 blur-[100px] md:blur-[150px] rounded-full pointer-events-none">
+            </div>
 
             <div class="max-w-[1400px] mx-auto">
-                
+
                 <!-- Section Header -->
                 <div class="max-w-3xl mb-10 md:mb-16 text-left">
                     <div class="reveal reveal-up inline-flex items-center gap-3 mb-3 md:mb-4">
                         <span class="h-[1px] w-8 bg-lux-gold-500"></span>
-                        <span class="text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium text-lux-gold-500">Resultados Práticos</span>
+                        <span
+                            class="text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium text-lux-gold-500">Resultados
+                            Práticos</span>
                     </div>
-                    <h2 class="reveal reveal-up font-serif text-3xl md:text-5xl text-lux-obsidian dark:text-lux-cream leading-tight">
-                        Desempenho e Retorno <br class="hidden sm:inline"/>
+                    <h2
+                        class="reveal reveal-up font-serif text-3xl md:text-5xl text-lux-obsidian dark:text-lux-cream leading-tight">
+                        Desempenho e Retorno <br class="hidden sm:inline" />
                         sobre a <span class="font-serif italic text-lux-gold-500">Estética da sua Marca</span>
                     </h2>
-                    <p class="reveal reveal-up font-sans text-xs md:text-base text-lux-obsidian/70 dark:text-lux-cream/70 mt-3 md:mt-4 max-w-xl leading-relaxed">
-                        A beleza de um bom posicionamento se reflete nos números. Confira os resultados reais obtidos em campanhas de alta performance com captação de pacientes de cirurgia plástica e estética high-ticket.
+                    <p
+                        class="reveal reveal-up font-sans text-xs md:text-base text-lux-obsidian/70 dark:text-lux-cream/70 mt-3 md:mt-4 max-w-xl leading-relaxed">
+                        A beleza de um bom posicionamento se reflete nos números. Confira os resultados reais obtidos em
+                        campanhas de alta performance com captação de pacientes de cirurgia plástica e estética
+                        high-ticket.
                     </p>
                 </div>
 
                 <!-- Results Grid (Horizontal swipeable carousel on mobile, 3-column grid on md+ screens) -->
                 <div class="reveal reveal-scale">
-                    <div class="flex gap-4 md:gap-8 overflow-x-auto hide-scrollbar snap-x cursor-grab active:cursor-grabbing pb-6 md:grid md:grid-cols-3 md:overflow-visible" id="results-carousel">
-                        
+                    <div class="flex gap-4 md:gap-8 overflow-x-auto hide-scrollbar snap-x cursor-grab active:cursor-grabbing pb-6 md:grid md:grid-cols-3 md:overflow-visible"
+                        id="results-carousel">
+
                         <!-- Resultado 1 -->
-                        <div class="carousel-item w-[260px] md:w-auto shrink-0 snap-start glass-panel p-4 md:p-6 flex flex-col justify-between group" style="transition-delay: 0ms;">
+                        <div class="carousel-item w-[260px] md:w-auto shrink-0 snap-start glass-panel p-4 md:p-6 flex flex-col justify-between group"
+                            style="transition-delay: 0ms;">
                             <div>
-                                <div class="w-full aspect-[4/3] bg-lux-charcoal overflow-hidden border border-lux-gold-500/10 mb-4 md:mb-6">
-                                    <img src="img/resultado01.PNG" alt="Gráfico de Resultado 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+                                <div
+                                    class="w-full aspect-[4/3] bg-lux-charcoal overflow-hidden border border-lux-gold-500/10 mb-4 md:mb-6">
+                                    <img src="img/resultado01.JPEG" alt="Gráfico de Resultado 1"
+                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                        loading="lazy">
                                 </div>
-                                <span class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 font-semibold">CIRURGIA PLÁSTICA</span>
-                                <h3 class="font-serif text-base md:text-xl text-lux-obsidian dark:text-lux-cream mt-1 md:mt-2 mb-2 md:mb-3">Crescimento de Captação</h3>
-                                <p class="text-[11px] md:text-xs text-lux-obsidian/70 dark:text-lux-cream/70 leading-relaxed">Aumento expressivo no fluxo de leads altamente qualificados interessados em procedimentos cirúrgicos nobres.</p>
+                                <span
+                                    class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 font-semibold">CIRURGIA
+                                    PLÁSTICA</span>
+                                <h3
+                                    class="font-serif text-base md:text-xl text-lux-obsidian dark:text-lux-cream mt-1 md:mt-2 mb-2 md:mb-3">
+                                    Crescimento de Captação</h3>
+                                <p
+                                    class="text-[11px] md:text-xs text-lux-obsidian/70 dark:text-lux-cream/70 leading-relaxed">
+                                    Aumento expressivo no fluxo de leads altamente qualificados interessados em
+                                    procedimentos cirúrgicos nobres.</p>
                             </div>
-                            <div class="border-t border-lux-gold-500/10 pt-3 md:pt-4 mt-4 md:mt-6 flex justify-between items-center text-[10px] md:text-xs">
+                            <div
+                                class="border-t border-lux-gold-500/10 pt-3 md:pt-4 mt-4 md:mt-6 flex justify-between items-center text-[10px] md:text-xs">
                                 <span class="text-lux-gold-500 font-bold">Performance Real</span>
                                 <span class="material-symbols-outlined text-lux-gold-500 text-sm">trending_up</span>
                             </div>
                         </div>
 
                         <!-- Resultado 2 -->
-                        <div class="carousel-item w-[260px] md:w-auto shrink-0 snap-start glass-panel p-4 md:p-6 flex flex-col justify-between group" style="transition-delay: 100ms;">
+                        <div class="carousel-item w-[260px] md:w-auto shrink-0 snap-start glass-panel p-4 md:p-6 flex flex-col justify-between group"
+                            style="transition-delay: 100ms;">
                             <div>
-                                <div class="w-full aspect-[4/3] bg-lux-charcoal overflow-hidden border border-lux-gold-500/10 mb-4 md:mb-6">
-                                    <img src="img/resultado02.PNG" alt="Gráfico de Resultado 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+                                <div
+                                    class="w-full aspect-[4/3] bg-lux-charcoal overflow-hidden border border-lux-gold-500/10 mb-4 md:mb-6">
+                                    <img src="img/resultado02.JPEG" alt="Gráfico de Resultado 2"
+                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                        loading="lazy">
                                 </div>
-                                <span class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 font-semibold">DERMATOLOGIA PREMIUM</span>
-                                <h3 class="font-serif text-base md:text-xl text-lux-obsidian dark:text-lux-cream mt-1 md:mt-2 mb-2 md:mb-3">Retorno de Investimento (ROI)</h3>
-                                <p class="text-[11px] md:text-xs text-lux-obsidian/70 dark:text-lux-cream/70 leading-relaxed">Otimização de campanhas pagas para captação de pacientes para pacotes estéticos e tratamentos corporais.</p>
+                                <span
+                                    class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 font-semibold">DERMATOLOGIA
+                                    PREMIUM</span>
+                                <h3
+                                    class="font-serif text-base md:text-xl text-lux-obsidian dark:text-lux-cream mt-1 md:mt-2 mb-2 md:mb-3">
+                                    Retorno de Investimento (ROI)</h3>
+                                <p
+                                    class="text-[11px] md:text-xs text-lux-obsidian/70 dark:text-lux-cream/70 leading-relaxed">
+                                    Otimização de campanhas pagas para captação de pacientes para pacotes estéticos e
+                                    tratamentos corporais.</p>
                             </div>
-                            <div class="border-t border-lux-gold-500/10 pt-3 md:pt-4 mt-4 md:mt-6 flex justify-between items-center text-[10px] md:text-xs">
+                            <div
+                                class="border-t border-lux-gold-500/10 pt-3 md:pt-4 mt-4 md:mt-6 flex justify-between items-center text-[10px] md:text-xs">
                                 <span class="text-lux-gold-500 font-bold">Faturamento Escalado</span>
                                 <span class="material-symbols-outlined text-lux-gold-500 text-sm">payments</span>
                             </div>
                         </div>
 
                         <!-- Resultado 3 -->
-                        <div class="carousel-item w-[260px] md:w-auto shrink-0 snap-start glass-panel p-4 md:p-6 flex flex-col justify-between group" style="transition-delay: 200ms;">
+                        <div class="carousel-item w-[260px] md:w-auto shrink-0 snap-start glass-panel p-4 md:p-6 flex flex-col justify-between group"
+                            style="transition-delay: 200ms;">
                             <div>
-                                <div class="w-full aspect-[4/3] bg-lux-charcoal overflow-hidden border border-lux-gold-500/10 mb-4 md:mb-6">
-                                    <img src="img/resultado03.PNG" alt="Gráfico de Resultado 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+                                <div
+                                    class="w-full aspect-[4/3] bg-lux-charcoal overflow-hidden border border-lux-gold-500/10 mb-4 md:mb-6">
+                                    <img src="img/resultado03.PNG" alt="Gráfico de Resultado 3"
+                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                        loading="lazy">
                                 </div>
-                                <span class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 font-semibold">CLÍNICA MULTIDISCIPLINAR</span>
-                                <h3 class="font-serif text-base md:text-xl text-lux-obsidian dark:text-lux-cream mt-1 md:mt-2 mb-2 md:mb-3">Engajamento de Alto Valor</h3>
-                                <p class="text-[11px] md:text-xs text-lux-obsidian/70 dark:text-lux-cream/70 leading-relaxed">Engajamento real e qualificado que se converte de forma orgânica em consultas particulares e indicações.</p>
+                                <span
+                                    class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 font-semibold">CLÍNICA
+                                    MULTIDISCIPLINAR</span>
+                                <h3
+                                    class="font-serif text-base md:text-xl text-lux-obsidian dark:text-lux-cream mt-1 md:mt-2 mb-2 md:mb-3">
+                                    Engajamento de Alto Valor</h3>
+                                <p
+                                    class="text-[11px] md:text-xs text-lux-obsidian/70 dark:text-lux-cream/70 leading-relaxed">
+                                    Engajamento real e qualificado que se converte de forma orgânica em consultas
+                                    particulares e indicações.</p>
                             </div>
-                            <div class="border-t border-lux-gold-500/10 pt-3 md:pt-4 mt-4 md:mt-6 flex justify-between items-center text-[10px] md:text-xs">
+                            <div
+                                class="border-t border-lux-gold-500/10 pt-3 md:pt-4 mt-4 md:mt-6 flex justify-between items-center text-[10px] md:text-xs">
                                 <span class="text-lux-gold-500 font-bold">Engajamento Autoridade</span>
                                 <span class="material-symbols-outlined text-lux-gold-500 text-sm">insights</span>
                             </div>
                         </div>
 
                         <!-- Resultado 4 -->
-                        <div class="carousel-item w-[260px] md:w-auto shrink-0 snap-start glass-panel p-4 md:p-6 flex flex-col justify-between group" style="transition-delay: 0ms;">
+                        <div class="carousel-item w-[260px] md:w-auto shrink-0 snap-start glass-panel p-4 md:p-6 flex flex-col justify-between group"
+                            style="transition-delay: 0ms;">
                             <div>
-                                <div class="w-full aspect-[4/3] bg-lux-charcoal overflow-hidden border border-lux-gold-500/10 mb-4 md:mb-6">
-                                    <img src="img/resultado04.jpeg" alt="Dashboard de Performance 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+                                <div
+                                    class="w-full aspect-[4/3] bg-lux-charcoal overflow-hidden border border-lux-gold-500/10 mb-4 md:mb-6">
+                                    <img src="img/resultado04.JPEG" alt="Dashboard de Performance 4"
+                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                        loading="lazy">
                                 </div>
-                                <span class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 font-semibold">ESTÉTICA FACIAL AVANÇADA</span>
-                                <h3 class="font-serif text-base md:text-xl text-lux-obsidian dark:text-lux-cream mt-1 md:mt-2 mb-2 md:mb-3">Crescimento de Reach</h3>
-                                <p class="text-[11px] md:text-xs text-lux-obsidian/70 dark:text-lux-cream/70 leading-relaxed">Campanhas direcionadas para captação local de pacientes qualificados de classe AAA interessados em preenchimentos.</p>
+                                <span
+                                    class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 font-semibold">ESTÉTICA
+                                    FACIAL AVANÇADA</span>
+                                <h3
+                                    class="font-serif text-base md:text-xl text-lux-obsidian dark:text-lux-cream mt-1 md:mt-2 mb-2 md:mb-3">
+                                    Crescimento</h3>
+                                <p
+                                    class="text-[11px] md:text-xs text-lux-obsidian/70 dark:text-lux-cream/70 leading-relaxed">
+                                    Atração de novos seguidores altamente alinhados ao público-alvo da Dra. Karina
+                                    Salim.
+                                </p>
                             </div>
-                            <div class="border-t border-lux-gold-500/10 pt-3 md:pt-4 mt-4 md:mt-6 flex justify-between items-center text-[10px] md:text-xs">
+                            <div
+                                class="border-t border-lux-gold-500/10 pt-3 md:pt-4 mt-4 md:mt-6 flex justify-between items-center text-[10px] md:text-xs">
                                 <span class="text-lux-gold-500 font-bold">Conversão Avançada</span>
                                 <span class="material-symbols-outlined text-lux-gold-500 text-sm">ads_click</span>
                             </div>
                         </div>
 
                         <!-- Resultado 5 -->
-                        <div class="carousel-item w-[260px] md:w-auto shrink-0 snap-start glass-panel p-4 md:p-6 flex flex-col justify-between group" style="transition-delay: 100ms;">
+                        <div class="carousel-item w-[260px] md:w-auto shrink-0 snap-start glass-panel p-4 md:p-6 flex flex-col justify-between group"
+                            style="transition-delay: 0ms;">
                             <div>
-                                <div class="w-full aspect-[4/3] bg-lux-charcoal overflow-hidden border border-lux-gold-500/10 mb-4 md:mb-6">
-                                    <img src="img/resultado05.jpeg" alt="Dashboard de Performance 5" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+                                <div
+                                    class="w-full aspect-[4/3] bg-lux-charcoal overflow-hidden border border-lux-gold-500/10 mb-4 md:mb-6">
+                                    <img src="img/resultado07.PNG" alt="Dashboard de Performance 4"
+                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                        loading="lazy">
                                 </div>
-                                <span class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 font-semibold">MÉDICOS DO BEM-ESTAR</span>
-                                <h3 class="font-serif text-base md:text-xl text-lux-obsidian dark:text-lux-cream mt-1 md:mt-2 mb-2 md:mb-3">Retenção e Indicações</h3>
-                                <p class="text-[11px] md:text-xs text-lux-obsidian/70 dark:text-lux-cream/70 leading-relaxed">Desenvolvimento de régua de pós-consulta e fidelização de marca própria na esfera médica.</p>
+                                <span
+                                    class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 font-semibold">FEEDBACK</span>
+                                <h3
+                                    class="font-serif text-base md:text-xl text-lux-obsidian dark:text-lux-cream mt-1 md:mt-2 mb-2 md:mb-3">
+                                    Resultado</h3>
+                                <p
+                                    class="text-[11px] md:text-xs text-lux-obsidian/70 dark:text-lux-cream/70 leading-relaxed">
+                                    A produção consistente de conteúdo fortaleceu sua autoridade no mercado e resultou em uma parceria profissional com a L’Oréal Paris.
+                                </p>
                             </div>
-                            <div class="border-t border-lux-gold-500/10 pt-3 md:pt-4 mt-4 md:mt-6 flex justify-between items-center text-[10px] md:text-xs">
-                                <span class="text-lux-gold-500 font-bold">LTV de Pacientes</span>
-                                <span class="material-symbols-outlined text-lux-gold-500 text-sm">group_add</span>
-                            </div>
-                        </div>
-
-                        <!-- Resultado 6 -->
-                        <div class="carousel-item w-[260px] md:w-auto shrink-0 snap-start glass-panel p-4 md:p-6 flex flex-col justify-between group" style="transition-delay: 200ms;">
-                            <div>
-                                <div class="w-full aspect-[4/3] bg-lux-charcoal overflow-hidden border border-lux-gold-500/10 mb-4 md:mb-6">
-                                    <img src="img/resultado06.PNG" alt="Dashboard de Performance 6" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
-                                </div>
-                                <span class="text-[9px] md:text-[10px] uppercase tracking-widest text-lux-gold-500 font-semibold">AGENDAMENTO DIRETO</span>
-                                <h3 class="font-serif text-base md:text-xl text-lux-obsidian dark:text-lux-cream mt-1 md:mt-2 mb-2 md:mb-3">Redução de Custo por Lead</h3>
-                                <p class="text-[11px] md:text-xs text-lux-obsidian/70 dark:text-lux-cream/70 leading-relaxed">Estruturação de funis automatizados no WhatsApp da clínica, reduzindo tempo de espera e otimizando agendamentos.</p>
-                            </div>
-                            <div class="border-t border-lux-gold-500/10 pt-3 md:pt-4 mt-4 md:mt-6 flex justify-between items-center text-[10px] md:text-xs">
-                                <span class="text-lux-gold-500 font-bold">Agendamento Otimizado</span>
-                                <span class="material-symbols-outlined text-lux-gold-500 text-sm">calendar_month</span>
+                            <div
+                                class="border-t border-lux-gold-500/10 pt-3 md:pt-4 mt-4 md:mt-6 flex justify-between items-center text-[10px] md:text-xs">
+                                <span class="text-lux-gold-500 font-bold">Resultado e Estratégia</span>
+                                <span class="material-symbols-outlined text-lux-gold-500 text-sm">insights</span>
                             </div>
                         </div>
 
@@ -954,7 +1321,8 @@
 
                     <!-- Swipe indicator (Only visible on mobile) -->
                     <div class="flex items-center justify-between mt-3 md:hidden">
-                        <span class="text-[9px] tracking-widest text-lux-gold-500/60 font-sans uppercase">Deslize para ver mais resultados</span>
+                        <span class="text-[9px] tracking-widest text-lux-gold-500/60 font-sans uppercase">Deslize para
+                            ver mais resultados</span>
                         <div class="w-8 h-[1px] bg-lux-gold-500/30"></div>
                     </div>
                 </div>
@@ -963,73 +1331,108 @@
         </section>
 
         <!-- EXPERTISE / SERVICES ACCORDION -->
-        <section id="servicos" class="py-16 md:py-24 px-4 md:px-16 lg:px-24 bg-lux-silk dark:bg-lux-charcoal border-y border-lux-gold-500/10 relative">
+        <section id="servicos"
+            class="py-16 md:py-24 px-4 md:px-16 lg:px-24 bg-lux-silk dark:bg-lux-charcoal border-y border-lux-gold-500/10 relative">
             <div class="max-w-[1400px] mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
-                    
+
                     <!-- Text Area Left -->
                     <div class="lg:col-span-5 flex flex-col justify-start">
                         <div class="reveal reveal-up inline-flex items-center gap-3 mb-3 md:mb-4">
                             <span class="h-[1px] w-8 bg-lux-gold-500"></span>
-                            <span class="text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium text-lux-gold-500">Expertise da Agência</span>
+                            <span
+                                class="text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium text-lux-gold-500">Expertise
+                                da Agência</span>
                         </div>
-                        <h2 class="reveal reveal-up font-serif text-3xl md:text-5xl text-lux-obsidian dark:text-lux-cream leading-tight">
-                            Elevando o padrão de <br class="hidden sm:inline"/>
+                        <h2
+                            class="reveal reveal-up font-serif text-3xl md:text-5xl text-lux-obsidian dark:text-lux-cream leading-tight">
+                            Elevando o padrão de <br class="hidden sm:inline" />
                             <span class="font-serif italic text-lux-gold-500">presença digital</span> da sua clínica.
                         </h2>
-                        <p class="reveal reveal-up font-sans text-xs md:text-base text-lux-obsidian/70 dark:text-lux-cream/70 mt-4 md:mt-6 leading-relaxed max-w-md">
-                            Trabalhamos de forma integrada em três pilares fundamentais, desenvolvendo uma presença digital consistente, respeitável e que converte cliques em consultas de alto ticket.
+                        <p
+                            class="reveal reveal-up font-sans text-xs md:text-base text-lux-obsidian/70 dark:text-lux-cream/70 mt-4 md:mt-6 leading-relaxed max-w-md">
+                            Trabalhamos de forma integrada em três pilares fundamentais, desenvolvendo uma presença
+                            digital consistente, respeitável e que converte cliques em consultas de alto ticket.
                         </p>
                     </div>
 
                     <!-- Accordion Area Right -->
                     <div class="lg:col-span-7 flex flex-col justify-center">
                         <div class="divide-y divide-lux-gold-500/20">
-                            
+
                             <!-- Expertise 1 -->
-                            <div class="reveal reveal-up py-5 md:py-6 group cursor-pointer" onclick="toggleAccordion(1)" style="transition-delay: 0ms;">
+                            <div class="reveal reveal-up py-5 md:py-6 group cursor-pointer" onclick="toggleAccordion(1)"
+                                style="transition-delay: 0ms;">
                                 <div class="flex justify-between items-center">
                                     <div class="flex items-center gap-4 md:gap-6">
-                                        <span class="font-serif text-lux-gold-500 text-base md:text-xl font-bold">01</span>
-                                        <h3 class="font-serif text-base md:text-2xl text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Estratégia Digital & Posicionamento</h3>
+                                        <span
+                                            class="font-serif text-lux-gold-500 text-base md:text-xl font-bold">01</span>
+                                        <h3
+                                            class="font-serif text-base md:text-2xl text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                            Estratégia Digital & Posicionamento</h3>
                                     </div>
-                                    <span id="icon-accordion-1" class="material-symbols-outlined text-lux-gold-500 transition-transform duration-300">add</span>
+                                    <span id="icon-accordion-1"
+                                        class="material-symbols-outlined text-lux-gold-500 transition-transform duration-300">add</span>
                                 </div>
-                                <div id="content-accordion-1" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-                                    <p class="font-sans text-xs md:text-base text-lux-obsidian/70 dark:text-lux-cream/70 pt-3 pl-8 md:pl-12 leading-relaxed">
-                                        Mapeamento de público-alvo classe A, definição de narrativas estratégicas e planejamento de campanhas de tráfego de alta segmentação. Estruturamos o funil para que o médico se comunique de forma ética e exclusiva.
+                                <div id="content-accordion-1"
+                                    class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                    <p
+                                        class="font-sans text-xs md:text-base text-lux-obsidian/70 dark:text-lux-cream/70 pt-3 pl-8 md:pl-12 leading-relaxed">
+                                        Mapeamento de público-alvo, definição de narrativas estratégicas e planejamento
+                                        de campanhas. Estruturamos o funil para que o médico se comunique de forma ética
+                                        e única.
                                     </p>
                                 </div>
                             </div>
 
                             <!-- Expertise 2 -->
-                            <div class="reveal reveal-up py-5 md:py-6 group cursor-pointer" onclick="toggleAccordion(2)" style="transition-delay: 100ms;">
+                            <div class="reveal reveal-up py-5 md:py-6 group cursor-pointer" onclick="toggleAccordion(2)"
+                                style="transition-delay: 100ms;">
                                 <div class="flex justify-between items-center">
                                     <div class="flex items-center gap-4 md:gap-6">
-                                        <span class="font-serif text-lux-gold-500 text-base md:text-xl font-bold">02</span>
-                                        <h3 class="font-serif text-base md:text-2xl text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Identidade Visual & Branding Atemporal</h3>
+                                        <span
+                                            class="font-serif text-lux-gold-500 text-base md:text-xl font-bold">02</span>
+                                        <h3
+                                            class="font-serif text-base md:text-2xl text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                            Identidade Visual & Branding Atemporal</h3>
                                     </div>
-                                    <span id="icon-accordion-2" class="material-symbols-outlined text-lux-gold-500 transition-transform duration-300">add</span>
+                                    <span id="icon-accordion-2"
+                                        class="material-symbols-outlined text-lux-gold-500 transition-transform duration-300">add</span>
                                 </div>
-                                <div id="content-accordion-2" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-                                    <p class="font-sans text-xs md:text-base text-lux-obsidian/70 dark:text-lux-cream/70 pt-3 pl-8 md:pl-12 leading-relaxed">
-                                        Design minimalista e atemporal que comunica confiança, seriedade e luxo. Desde a reestruturação da sua paleta de cores à curadoria tipográfica e templates de redes sociais de alta fidelidade visual.
+                                <div id="content-accordion-2"
+                                    class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                    <p
+                                        class="font-sans text-xs md:text-base text-lux-obsidian/70 dark:text-lux-cream/70 pt-3 pl-8 md:pl-12 leading-relaxed">
+                                        Desenvolvemos identidades visuais minimalistas e atemporais que comunicam
+                                        confiança, autoridade e sofisticação. Da definição estratégica da paleta de
+                                        cores à curadoria tipográfica e criação de templates de alta fidelidade visual,
+                                        cada detalhe é pensado para fortalecer o posicionamento e a percepção de valor
+                                        da sua marca.
                                     </p>
                                 </div>
                             </div>
 
                             <!-- Expertise 3 -->
-                            <div class="reveal reveal-up py-5 md:py-6 group cursor-pointer" onclick="toggleAccordion(3)" style="transition-delay: 200ms;">
+                            <div class="reveal reveal-up py-5 md:py-6 group cursor-pointer" onclick="toggleAccordion(3)"
+                                style="transition-delay: 200ms;">
                                 <div class="flex justify-between items-center">
                                     <div class="flex items-center gap-4 md:gap-6">
-                                        <span class="font-serif text-lux-gold-500 text-base md:text-xl font-bold">03</span>
-                                        <h3 class="font-serif text-base md:text-2xl text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">Produção Audiovisual de Alto Padrão</h3>
+                                        <span
+                                            class="font-serif text-lux-gold-500 text-base md:text-xl font-bold">03</span>
+                                        <h3
+                                            class="font-serif text-base md:text-2xl text-lux-obsidian dark:text-lux-cream group-hover:text-lux-gold-500 transition-colors">
+                                            Produção Audiovisual de Alto Padrão</h3>
                                     </div>
-                                    <span id="icon-accordion-3" class="material-symbols-outlined text-lux-gold-500 transition-transform duration-300">add</span>
+                                    <span id="icon-accordion-3"
+                                        class="material-symbols-outlined text-lux-gold-500 transition-transform duration-300">add</span>
                                 </div>
-                                <div id="content-accordion-3" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-                                    <p class="font-sans text-xs md:text-base text-lux-obsidian/70 dark:text-lux-cream/70 pt-3 pl-8 md:pl-12 leading-relaxed">
-                                        Roteirização, gravação e edição de vídeos profissionais em formato Reels/YouTube. Direção de cena para que sua fala transmita segurança científica e sua clínica se mostre impecável.
+                                <div id="content-accordion-3"
+                                    class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                    <p
+                                        class="font-sans text-xs md:text-base text-lux-obsidian/70 dark:text-lux-cream/70 pt-3 pl-8 md:pl-12 leading-relaxed">
+                                        Produção audiovisual completa para profissionais que desejam se posicionar como
+                                        referência em sua área. Da construção da mensagem à direção de cena, garantimos
+                                        vídeos que comunicam excelência, confiança e profissionalismo.
                                     </p>
                                 </div>
                             </div>
@@ -1042,25 +1445,31 @@
         </section>
 
         <!-- THE VISIONARY / INSTITUTIONAL SECTION -->
-        <section id="visionario" class="py-16 md:py-24 px-4 md:px-16 lg:px-24 bg-lux-cream dark:bg-lux-obsidian relative">
+        <section id="visionario"
+            class="py-16 md:py-24 px-4 md:px-16 lg:px-24 bg-lux-cream dark:bg-lux-obsidian relative">
             <div class="max-w-[1400px] mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center">
-                    
+
                     <!-- Founder Image Side -->
                     <div class="lg:col-span-5 relative flex justify-center w-full">
-                        <div class="reveal reveal-left w-full max-w-[340px] md:max-w-none aspect-[4/5] bg-lux-silk border border-lux-gold-500/20 overflow-hidden shadow-2xl relative">
+                        <div
+                            class="reveal reveal-left w-full max-w-[340px] md:max-w-none aspect-[4/5] bg-lux-silk border border-lux-gold-500/20 overflow-hidden shadow-2xl relative">
                             <!-- Using the visionary placeholder from template -->
-                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWAq6Xa26y0dac-aztLJoXgPI-4JJdvUB4uQpwwVNLf06XzcyEPS6PGzaALahp6F8J5airT8BR1VNdwyfWLn3IsnIE6NmntfGx4vfqZ1L7jHQZ7U5x366Z44m9VeLrIBqmD0LI2YYzu-Oi3KnPjcLsFr1JoL3-2-hbV9pS-uODT3Fpr-8dLqHLjuug2ibYKAQoblbAz9FSEPHbKjwS3L4spkjcrkyNuSJYQV-RCA8mFZJ_85wfcqetAPIiVI9gWwZVJe23iNzwsdI" 
-                                 alt="O Visionário - Diretor de Posicionamento" 
-                                 class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out">
+                            <img src="img/erik.JPEG" alt="Erik Giusti  "
+                                class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out">
                             <!-- Overlay filter -->
-                            <div class="absolute inset-0 bg-lux-gold-500/10 mix-blend-overlay pointer-events-none"></div>
+                            <div class="absolute inset-0 bg-lux-gold-500/10 mix-blend-overlay pointer-events-none">
+                            </div>
                         </div>
-                        
+
                         <!-- Floating Accent Card -->
-                        <div class="reveal reveal-up absolute -bottom-6 -right-2 md:-right-8 glass-panel p-4 md:p-6 max-w-[200px] md:max-w-xs shadow-xl" style="transition-delay: 200ms;">
-                            <span class="text-lg md:text-2xl font-serif italic text-lux-gold-500 block mb-1">Especialista</span>
-                            <p class="text-[10px] md:text-xs text-lux-obsidian/70 dark:text-lux-cream/70 leading-relaxed">Mentoria de posicionamento e tráfego pago exclusivo para médicos e clínicas nobres.</p>
+                        <div class="reveal reveal-up absolute -bottom-6 -right-2 md:-right-8 glass-panel p-4 md:p-6 max-w-[200px] md:max-w-xs shadow-xl"
+                            style="transition-delay: 200ms;">
+                            <span class="text-lg md:text-2xl font-serif italic text-lux-gold-500 block mb-1">Erik
+                                Giusti</span>
+                            <p
+                                class="text-[10px] md:text-xs text-lux-obsidian/70 dark:text-lux-cream/70 leading-relaxed">
+                                Especialista em marketing de saúde e estética há 4 anos.</p>
                         </div>
                     </div>
 
@@ -1068,23 +1477,35 @@
                     <div class="lg:col-span-7 flex flex-col justify-center text-left mt-6 lg:mt-0">
                         <div class="reveal reveal-up inline-flex items-center gap-3 mb-4 md:mb-6">
                             <span class="h-[1px] w-8 bg-lux-gold-500"></span>
-                            <span class="text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium text-lux-gold-500">O Visionário</span>
+                            <span
+                                class="text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium text-lux-gold-500">O
+                                Visionário</span>
                         </div>
-                        
-                        <h2 class="reveal reveal-up font-serif text-3xl md:text-5xl text-lux-obsidian dark:text-lux-cream leading-tight mb-4 md:mb-6" style="transition-delay: 100ms;">
-                            Conectando a <span class="font-serif italic text-lux-gold-500">ciência médica</span> à percepção de valor.
+
+                        <h2 class="reveal reveal-up font-serif text-3xl md:text-5xl text-lux-obsidian dark:text-lux-cream leading-tight mb-4 md:mb-6"
+                            style="transition-delay: 100ms;">
+                            Conectando a <span class="font-serif italic text-lux-gold-500">ciência médica</span> à
+                            percepção de valor.
                         </h2>
-                        
-                        <p class="reveal reveal-up font-sans text-xs md:text-base text-lux-obsidian/70 dark:text-lux-cream/70 mb-4 md:mb-6 leading-relaxed" style="transition-delay: 200ms;">
-                            Entendemos que o médico de alto padrão não vende apenas procedimentos, ele vende transformações profundas e autocuidado de luxo. A publicidade nobre requer respeito ao código de ética e cuidado estético atemporal.
+
+                        <p class="reveal reveal-up font-sans text-xs md:text-base text-lux-obsidian/70 dark:text-lux-cream/70 mb-4 md:mb-6 leading-relaxed"
+                            style="transition-delay: 200ms;">
+                            Entendemos que profissionais da saúde e estética de alto padrão não oferecem apenas serviços , oferecem
+                            transformação, confiança e qualidade de vida. Por isso, a comunicação precisa ir além da divulgação: deve transmitir
+                            credibilidade, respeitar os princípios éticos da profissão e construir uma percepção de valor duradoura.
                         </p>
-                        <p class="reveal reveal-up font-sans text-xs md:text-base text-lux-obsidian/70 dark:text-lux-cream/70 mb-6 md:mb-8 leading-relaxed" style="transition-delay: 250ms;">
-                            Nossa agência formata toda a identidade do profissional – desde a gravação do audiovisual cinemático à reestruturação de campanhas no tráfego pago – para que você se comunique com naturalidade e exclusividade.
+                        <p class="reveal reveal-up font-sans text-xs md:text-base text-lux-obsidian/70 dark:text-lux-cream/70 mb-6 md:mb-8 leading-relaxed"
+                            style="transition-delay: 250ms;">
+                            No nosso estúdio de marketing, desenvolvemos todo o ecossistema de posicionamento da marca, da identidade visual à
+                            produção audiovisual cinematográfica, passando pela estratégia de conteúdo e otimização de campanhas. Cada detalhe é
+                            pensado para que você se comunique com autenticidade, fortaleça sua autoridade e se destaque em um mercado cada vez
+                            mais competitivo.
                         </p>
-                        
+
                         <div class="reveal reveal-up" style="transition-delay: 300ms;">
-                            <a href="#contato" class="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-3.5 md:py-4 bg-lux-gold-500 hover:bg-lux-gold-600 text-white font-sans text-xs uppercase tracking-widest transition-all hover:shadow-xl hover:shadow-lux-gold-500/20 w-full sm:w-auto">
-                                <span>Agendar Sessão Estratégica</span>
+                            <a href="#contato"
+                                class="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-3.5 md:py-4 bg-lux-gold-500 hover:bg-lux-gold-600 text-white font-sans text-xs uppercase tracking-widest transition-all hover:shadow-xl hover:shadow-lux-gold-500/20 w-full sm:w-auto">
+                                <span>Agendar Reunião</span>
                                 <span class="material-symbols-outlined text-sm">arrow_forward</span>
                             </a>
                         </div>
@@ -1095,42 +1516,44 @@
         </section>
 
         <!-- CTA SECTION: LEAD CAPTURE -->
-        <section id="contato" class="py-16 md:py-24 px-4 md:px-16 lg:px-24 bg-lux-obsidian text-lux-cream border-t border-lux-gold-500/20 relative pb-24 md:pb-28">
+        <section id="contato"
+            class="py-16 md:py-24 px-4 md:px-16 lg:px-24 bg-lux-obsidian text-lux-cream border-t border-lux-gold-500/20 relative pb-24 md:pb-28">
             <!-- Background light decor -->
-            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-lux-gold-500/10 via-transparent to-transparent opacity-60 pointer-events-none"></div>
+            <div
+                class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-lux-gold-500/10 via-transparent to-transparent opacity-60 pointer-events-none">
+            </div>
 
             <div class="max-w-[900px] mx-auto text-center relative z-10">
                 <div class="reveal reveal-up inline-flex items-center gap-3 mb-4 md:mb-6 justify-center">
                     <span class="h-[1px] w-8 bg-lux-gold-500"></span>
-                    <span class="text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium text-lux-gold-500">Contato Exclusivo</span>
+                    <span
+                        class="text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium text-lux-gold-500">Contato
+                        Exclusivo</span>
                     <span class="h-[1px] w-8 bg-lux-gold-500"></span>
                 </div>
-                
+
                 <h2 class="reveal reveal-up font-serif text-3xl md:text-6xl text-lux-cream leading-tight mb-6 md:mb-8">
-                    Pronto para estruturar o seu <br class="hidden sm:inline"/>
-                    <span class="font-serif italic text-lux-gold-500">posicionamento de luxo</span>?
+                    Pronto para estruturar o seu <br class="hidden sm:inline" />
+                    <span class="font-serif italic text-lux-gold-500">posicionamento</span>?
                 </h2>
-                
-                <p class="reveal reveal-up font-sans text-sm md:text-base text-lux-gold-100/70 max-w-xl mx-auto mb-8 md:mb-12 leading-relaxed" style="transition-delay: 150ms;">
-                    Selecione abaixo o seu canal de comunicação preferido e inicie seu diagnóstico de posicionamento de marca e captação premium hoje mesmo.
+
+                <p class="reveal reveal-up font-sans text-sm md:text-base text-lux-gold-100/70 max-w-xl mx-auto mb-8 md:mb-12 leading-relaxed"
+                    style="transition-delay: 150ms;">
+                    Selecione abaixo o seu canal de comunicação preferido e inicie seu diagnóstico de posicionamento de
+                    marca e captação premium hoje mesmo.
                 </p>
-                
+
                 <!-- Interaction Buttons -->
-                <div class="reveal reveal-up flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-stretch sm:items-center" style="transition-delay: 200ms;">
+                <div class="reveal reveal-up flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-stretch sm:items-center"
+                    style="transition-delay: 200ms;">
                     <!-- WhatsApp Premium Link -->
-                    <a href="https://wa.me/5599999999999?text=Ol%C3%A1,%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20de%20posicionamento%20de%20luxo." 
-                       target="_blank" 
-                       class="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-white text-lux-obsidian hover:bg-lux-gold-500 hover:text-white font-sans text-xs uppercase tracking-[0.2em] font-bold transition-all shadow-xl hover:shadow-lux-gold-500/20">
+                    <a href="https://wa.me/5599999999999?text=Ol%C3%A1,%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20de%20posicionamento%20de%20luxo."
+                        target="_blank"
+                        class="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 bg-white text-lux-obsidian hover:bg-lux-gold-500 hover:text-white font-sans text-xs uppercase tracking-[0.2em] font-bold transition-all shadow-xl hover:shadow-lux-gold-500/20">
                         <span class="material-symbols-outlined text-sm md:text-base">chat</span>
                         <span>Falar via WhatsApp</span>
                     </a>
-                    
-                    <!-- Direct Contact Form Button -->
-                    <a href="mailto:contato@agenciaestetica.com?subject=Diagnostico%20Marketing%20Luxo" 
-                       class="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-4 md:py-5 border border-lux-gold-500 text-lux-gold-500 hover:bg-lux-gold-500 hover:text-white font-sans text-xs uppercase tracking-[0.2em] font-bold transition-all">
-                        <span class="material-symbols-outlined text-sm md:text-base">mail</span>
-                        <span>Enviar E-mail Direto</span>
-                    </a>
+
                 </div>
             </div>
         </section>
@@ -1138,46 +1561,54 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="py-10 md:py-12 px-4 md:px-16 lg:px-24 bg-lux-obsidian text-lux-cream/60 border-t border-lux-gold-500/10 relative z-10 pb-28 md:pb-12">
+    <footer
+        class="py-10 md:py-12 px-4 md:px-16 lg:px-24 bg-lux-obsidian text-lux-cream/60 border-t border-lux-gold-500/10 relative z-10 pb-28 md:pb-12">
         <div class="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8">
             <div class="flex flex-col items-center md:items-start gap-1">
                 <span class="font-serif text-lg md:text-xl tracking-[0.2em] font-bold text-lux-cream">ESTÉTICA</span>
-                <p class="text-[9px] md:text-[10px] tracking-widest text-lux-gold-500 uppercase">Posicionamento de Luxo para Clínicas Médicas</p>
+                <p class="text-[9px] md:text-[10px] tracking-widest text-lux-gold-500 uppercase"> Criação de conteúdo para saúde e estética</p>
             </div>
-            
-            <nav class="flex flex-wrap justify-center gap-6 md:gap-8 text-[10px] md:text-xs tracking-wider uppercase font-semibold">
+
+            <nav
+                class="flex flex-wrap justify-center gap-6 md:gap-8 text-[10px] md:text-xs tracking-wider uppercase font-semibold">
                 <a href="#branding" class="hover:text-lux-gold-500 transition-colors">Portfólio</a>
                 <a href="#ensaio" class="hover:text-lux-gold-500 transition-colors">Ensaios</a>
                 <a href="#audiovisual" class="hover:text-lux-gold-500 transition-colors">Vídeos</a>
                 <a href="#resultados" class="hover:text-lux-gold-500 transition-colors">Casos</a>
-                <a href="#visionario" class="hover:text-lux-gold-500 transition-colors">A Agência</a>
+                <a href="#visionario" class="hover:text-lux-gold-500 transition-colors">O studio</a>
             </nav>
-            
+
             <p class="text-[9px] md:text-[10px] tracking-wider text-lux-cream/40">
-                &copy; 2026 ESTÉTICA. Todos os direitos reservados.
+                &copy; 2026 VENY STUDIO. Todos os direitos reservados.
             </p>
         </div>
     </footer>
 
     <!-- MOBILE BOTTOM NAVBAR (App-like UX with safe areas for iOS & Android) -->
-    <nav class="fixed bottom-0 left-0 w-full flex justify-around items-center pt-2.5 pb-[calc(8px+env(safe-area-inset-bottom))] bg-lux-cream dark:bg-lux-obsidian border-t border-lux-gold-500/10 z-50 md:hidden backdrop-blur-md bg-opacity-95 dark:bg-opacity-95 transition-colors duration-500">
-        <a class="flex flex-col items-center justify-center text-lux-gold-500 font-bold scale-95 transition-transform duration-200" href="#branding">
+    <nav
+        class="fixed bottom-0 left-0 w-full flex justify-around items-center pt-2.5 pb-[calc(8px+env(safe-area-inset-bottom))] bg-lux-cream dark:bg-lux-obsidian border-t border-lux-gold-500/10 z-50 md:hidden backdrop-blur-md bg-opacity-95 dark:bg-opacity-95 transition-colors duration-500">
+        <a class="flex flex-col items-center justify-center text-lux-gold-500 font-bold scale-95 transition-transform duration-200"
+            href="#branding">
             <span class="material-symbols-outlined text-lg">grid_view</span>
             <span class="text-[8px] uppercase tracking-wider mt-0.5 font-sans">Feed</span>
         </a>
-        <a class="flex flex-col items-center justify-center text-lux-obsidian/75 dark:text-lux-cream/75 hover:text-lux-gold-500 scale-95 transition-transform duration-200" href="#ensaio">
+        <a class="flex flex-col items-center justify-center text-lux-obsidian/75 dark:text-lux-cream/75 hover:text-lux-gold-500 scale-95 transition-transform duration-200"
+            href="#ensaio">
             <span class="material-symbols-outlined text-lg">photo_camera</span>
             <span class="text-[8px] uppercase tracking-wider mt-0.5 font-sans">Ensaios</span>
         </a>
-        <a class="flex flex-col items-center justify-center text-lux-obsidian/75 dark:text-lux-cream/75 hover:text-lux-gold-500 scale-95 transition-transform duration-200" href="#audiovisual">
+        <a class="flex flex-col items-center justify-center text-lux-obsidian/75 dark:text-lux-cream/75 hover:text-lux-gold-500 scale-95 transition-transform duration-200"
+            href="#audiovisual">
             <span class="material-symbols-outlined text-lg">video_library</span>
             <span class="text-[8px] uppercase tracking-wider mt-0.5 font-sans">Vídeos</span>
         </a>
-        <a class="flex flex-col items-center justify-center text-lux-obsidian/75 dark:text-lux-cream/75 hover:text-lux-gold-500 scale-95 transition-transform duration-200" href="#resultados">
+        <a class="flex flex-col items-center justify-center text-lux-obsidian/75 dark:text-lux-cream/75 hover:text-lux-gold-500 scale-95 transition-transform duration-200"
+            href="#resultados">
             <span class="material-symbols-outlined text-lg">insights</span>
             <span class="text-[8px] uppercase tracking-wider mt-0.5 font-sans">Casos</span>
         </a>
-        <a class="flex flex-col items-center justify-center text-lux-obsidian/75 dark:text-lux-cream/75 hover:text-lux-gold-500 scale-95 transition-transform duration-200" href="#visionario">
+        <a class="flex flex-col items-center justify-center text-lux-obsidian/75 dark:text-lux-cream/75 hover:text-lux-gold-500 scale-95 transition-transform duration-200"
+            href="#visionario">
             <span class="material-symbols-outlined text-lg">person_outline</span>
             <span class="text-[8px] uppercase tracking-wider mt-0.5 font-sans font-medium">Agência</span>
         </a>
@@ -1186,11 +1617,11 @@
     <!-- CORE JAVASCRIPT: THE ENGINE -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            
+
             // --- 1. DARK / LIGHT MODE ENGINE ---
             const themeToggleBtn = document.getElementById('theme-toggle');
             const htmlElement = document.documentElement;
-            
+
             if (!localStorage.getItem('theme')) {
                 localStorage.setItem('theme', 'dark');
                 htmlElement.classList.add('dark');
@@ -1201,7 +1632,7 @@
                 htmlElement.classList.add('light');
                 htmlElement.classList.remove('dark');
             }
-            
+
             themeToggleBtn.addEventListener('click', () => {
                 if (htmlElement.classList.contains('dark')) {
                     htmlElement.classList.remove('dark');
@@ -1216,12 +1647,12 @@
 
             // --- 2. ADVANCED SCROLL REVEAL ENGINE ---
             const revealElements = document.querySelectorAll('.reveal');
-            
+
             const revealObserverOptions = {
                 threshold: 0.05, // Lower threshold for mobile friendliness
-                rootMargin: '0px 0px -40px 0px' 
+                rootMargin: '0px 0px -40px 0px'
             };
-            
+
             const revealObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -1230,20 +1661,20 @@
                     }
                 });
             }, revealObserverOptions);
-            
+
             revealElements.forEach(el => {
                 revealObserver.observe(el);
             });
 
             // --- 3. CUSTOM HOVER CURSOR ENGINE (Desktop only) ---
             const cursor = document.getElementById('custom-cursor');
-            
+
             if (cursor) {
                 document.addEventListener('mousemove', (e) => {
                     cursor.style.left = e.clientX + 'px';
                     cursor.style.top = e.clientY + 'px';
                 });
-                
+
                 const interactives = document.querySelectorAll('a, button, [onclick], video');
                 interactives.forEach(el => {
                     el.addEventListener('mouseenter', () => {
@@ -1262,31 +1693,31 @@
                 document.getElementById('results-carousel'),
                 document.getElementById('photoshoot-carousel')
             ];
-            
+
             carousels.forEach(carousel => {
                 if (!carousel) return;
-                
+
                 let isDown = false;
                 let startX;
                 let scrollLeft;
-                
+
                 carousel.addEventListener('mousedown', (e) => {
                     isDown = true;
                     carousel.classList.add('active');
                     startX = e.pageX - carousel.offsetLeft;
                     scrollLeft = carousel.scrollLeft;
                 });
-                
+
                 carousel.addEventListener('mouseleave', () => {
                     isDown = false;
                     carousel.classList.remove('active');
                 });
-                
+
                 carousel.addEventListener('mouseup', () => {
                     isDown = false;
                     carousel.classList.remove('active');
                 });
-                
+
                 carousel.addEventListener('mousemove', (e) => {
                     if (!isDown) return;
                     e.preventDefault();
@@ -1300,12 +1731,12 @@
             const mainCarousel = document.getElementById('content-carousel');
             const prevBtn = document.getElementById('carousel-prev');
             const nextBtn = document.getElementById('carousel-next');
-            
+
             if (mainCarousel && prevBtn && nextBtn) {
                 prevBtn.addEventListener('click', () => {
                     mainCarousel.scrollBy({ left: -240, behavior: 'smooth' });
                 });
-                
+
                 nextBtn.addEventListener('click', () => {
                     mainCarousel.scrollBy({ left: 240, behavior: 'smooth' });
                 });
@@ -1315,12 +1746,12 @@
             const photoshootCarousel = document.getElementById('photoshoot-carousel');
             const photoshootPrevBtn = document.getElementById('photoshoot-prev');
             const photoshootNextBtn = document.getElementById('photoshoot-next');
-            
+
             if (photoshootCarousel && photoshootPrevBtn && photoshootNextBtn) {
                 photoshootPrevBtn.addEventListener('click', () => {
                     photoshootCarousel.scrollBy({ left: -260, behavior: 'smooth' });
                 });
-                
+
                 photoshootNextBtn.addEventListener('click', () => {
                     photoshootCarousel.scrollBy({ left: 260, behavior: 'smooth' });
                 });
@@ -1328,11 +1759,11 @@
 
             // --- 5. AUTOMATIC INTELLIGENT VIDEO PLAYBACK ---
             const videos = document.querySelectorAll('.lazy-video');
-            
+
             const videoObserverOptions = {
                 threshold: 0.15 // Play when 15% visible on mobile/desktop
             };
-            
+
             const videoObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     const video = entry.target;
@@ -1343,11 +1774,11 @@
                     }
                 });
             }, videoObserverOptions);
-            
+
             videos.forEach(v => {
                 videoObserver.observe(v);
             });
-            
+
             const playButtons = document.querySelectorAll('.video-play-btn');
             playButtons.forEach(btn => {
                 btn.addEventListener('click', (e) => {
@@ -1356,7 +1787,7 @@
                     const video = card.querySelector('video');
                     const labelSpan = btn.querySelector('span:last-child');
                     const iconSpan = btn.querySelector('.material-symbols-outlined');
-                    
+
                     if (video.paused) {
                         video.play();
                         labelSpan.textContent = "Pausar";
@@ -1373,7 +1804,7 @@
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-            
+
             if (mobileMenuBtn && mobileMenu) {
                 mobileMenuBtn.addEventListener('click', () => {
                     const isOpen = mobileMenu.classList.contains('translate-x-0');
@@ -1387,7 +1818,7 @@
                         mobileMenuBtn.querySelector('span').textContent = 'close';
                     }
                 });
-                
+
                 mobileLinks.forEach(link => {
                     link.addEventListener('click', () => {
                         mobileMenu.classList.add('translate-x-full');
@@ -1417,7 +1848,7 @@
             const icon = document.getElementById(`icon-accordion-${id}`);
             const allContents = document.querySelectorAll('[id^="content-accordion-"]');
             const allIcons = document.querySelectorAll('[id^="icon-accordion-"]');
-            
+
             allContents.forEach(c => {
                 if (c.id !== `content-accordion-${id}`) {
                     c.style.maxHeight = null;
@@ -1442,4 +1873,5 @@
         }
     </script>
 </body>
+
 </html>
