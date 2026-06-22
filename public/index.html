@@ -1562,14 +1562,54 @@
                             <input type="tel" id="form-phone" required placeholder="(11) 99999-9999" class="bg-[#0a0a0a] border border-lux-gold-500/20 rounded-md px-4 py-3 text-white focus:outline-none focus:border-lux-gold-500 transition-colors placeholder:text-white/20">
                         </div>
                         <div class="flex flex-col gap-2">
-                            <label for="form-specialty" class="text-[10px] uppercase tracking-widest text-lux-gold-500 font-semibold">Especialidade / Nome da Clínica</label>
-                            <input type="text" id="form-specialty" placeholder="Cirurgia Plástica / Dermatologia" class="bg-[#0a0a0a] border border-lux-gold-500/20 rounded-md px-4 py-3 text-white focus:outline-none focus:border-lux-gold-500 transition-colors placeholder:text-white/20">
+                            <label for="form-whatsapp" class="text-[10px] uppercase tracking-widest text-lux-gold-500 font-semibold">Posso entrar em contato via whatsapp?</label>
+                            <select id="form-whatsapp" class="bg-[#0a0a0a] border border-lux-gold-500/20 rounded-md px-4 py-3 text-white focus:outline-none focus:border-lux-gold-500 transition-colors">
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex flex-col gap-2">
+                            <label for="form-company" class="text-[10px] uppercase tracking-widest text-lux-gold-500 font-semibold">Empresa</label>
+                            <input type="text" id="form-company" placeholder="Nome da empresa" class="bg-[#0a0a0a] border border-lux-gold-500/20 rounded-md px-4 py-3 text-white focus:outline-none focus:border-lux-gold-500 transition-colors placeholder:text-white/20">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="form-size" class="text-[10px] uppercase tracking-widest text-lux-gold-500 font-semibold">Qual o tamanho da sua empresa?</label>
+                            <select id="form-size" class="bg-[#0a0a0a] border border-lux-gold-500/20 rounded-md px-4 py-3 text-white focus:outline-none focus:border-lux-gold-500 transition-colors">
+                                <option value="Profissional Liberal">Profissional Liberal</option>
+                                <option value="Micro (2-10)">Micro (2-10)</option>
+                                <option value="Pequena (11-50)">Pequena (11-50)</option>
+                                <option value="Média (51-200)">Média (51-200)</option>
+                                <option value="Grande (200+)">Grande (200+)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex flex-col gap-2">
+                            <label for="form-services" class="text-[10px] uppercase tracking-widest text-lux-gold-500 font-semibold">Quais serviços precisa?</label>
+                            <select id="form-services" class="bg-[#0a0a0a] border border-lux-gold-500/20 rounded-md px-4 py-3 text-white focus:outline-none focus:border-lux-gold-500 transition-colors">
+                                <option value="Criação de Nome">Criação de Nome</option>
+                                <option value="Criação de Nome e Identidade Visual">Criação de Nome e Identidade Visual</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="form-investment" class="text-[10px] uppercase tracking-widest text-lux-gold-500 font-semibold">Investimento / Renda Mensal</label>
+                            <select id="form-investment" class="bg-[#0a0a0a] border border-lux-gold-500/20 rounded-md px-4 py-3 text-white focus:outline-none focus:border-lux-gold-500 transition-colors">
+                                <option value="Até R$ 2.000">Até R$ 2.000</option>
+                                <option value="Até R$ 5.000">Até R$ 5.000</option>
+                                <option value="Até R$ 10.000">Até R$ 10.000</option>
+                                <option value="Até R$ 20.000">Até R$ 20.000</option>
+                            </select>
                         </div>
                     </div>
 
                     <div class="flex flex-col gap-2">
-                        <label for="form-message" class="text-[10px] uppercase tracking-widest text-lux-gold-500 font-semibold">Quais são seus objetivos atuais de marca?</label>
-                        <textarea id="form-message" rows="4" placeholder="Gostaria de elevar o ticket médio dos meus procedimentos..." class="bg-[#0a0a0a] border border-lux-gold-500/20 rounded-md px-4 py-3 text-white focus:outline-none focus:border-lux-gold-500 transition-colors resize-none placeholder:text-white/20"></textarea>
+                        <label for="form-message" class="text-[10px] uppercase tracking-widest text-lux-gold-500 font-semibold">Explique</label>
+                        <textarea id="form-message" rows="4" placeholder="Gostaria de comentar alguma coisa para nossa reunião ser mais objetiva?" class="bg-[#0a0a0a] border border-lux-gold-500/20 rounded-md px-4 py-3 text-white focus:outline-none focus:border-lux-gold-500 transition-colors resize-none placeholder:text-white/20"></textarea>
                     </div>
 
                     <button type="submit" id="form-submit-btn" class="mt-4 w-full bg-[#B89668] hover:bg-[#A38054] text-white font-sans text-xs uppercase tracking-[0.2em] font-bold py-4 rounded-md transition-colors flex justify-center items-center gap-2">
@@ -1949,7 +1989,11 @@
                     const name = document.getElementById('form-name').value;
                     const email = document.getElementById('form-email').value;
                     const phone = document.getElementById('form-phone').value;
-                    const specialty = document.getElementById('form-specialty').value;
+                    const whatsapp_contact = document.getElementById('form-whatsapp').value;
+                    const company = document.getElementById('form-company').value;
+                    const company_size = document.getElementById('form-size').value;
+                    const services = document.getElementById('form-services').value;
+                    const investment = document.getElementById('form-investment').value;
                     const message = document.getElementById('form-message').value;
                     
                     try {
@@ -1958,7 +2002,7 @@
                             headers: {
                                 'Content-Type': 'application/json'
                             },
-                            body: JSON.stringify({ name, email, phone, specialty, message })
+                            body: JSON.stringify({ name, email, phone, whatsapp_contact, company, company_size, services, investment, message })
                         });
                         
                         const data = await response.json();

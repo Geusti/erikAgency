@@ -90,6 +90,11 @@ async function initDb() {
         name TEXT NOT NULL,
         email TEXT NOT NULL,
         phone TEXT NOT NULL,
+        whatsapp_contact TEXT,
+        company TEXT,
+        company_size TEXT,
+        services TEXT,
+        investment TEXT,
         specialty TEXT,
         message TEXT,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -108,6 +113,11 @@ async function initDb() {
         name TEXT NOT NULL,
         email TEXT NOT NULL,
         phone TEXT NOT NULL,
+        whatsapp_contact TEXT,
+        company TEXT,
+        company_size TEXT,
+        services TEXT,
+        investment TEXT,
         specialty TEXT,
         message TEXT,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
