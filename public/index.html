@@ -218,16 +218,6 @@
                 transform: translateX(100%);
             }
         }
-
-        /* Float effect for Logo */
-        @keyframes float-logo {
-            0% { transform: translateY(0px) rotate(0deg); filter: drop-shadow(0 15px 15px rgba(197, 168, 128, 0.15)); }
-            50% { transform: translateY(-15px) rotate(1deg); filter: drop-shadow(0 25px 20px rgba(197, 168, 128, 0.25)); }
-            100% { transform: translateY(0px) rotate(0deg); filter: drop-shadow(0 15px 15px rgba(197, 168, 128, 0.15)); }
-        }
-        .animate-float-logo {
-            animation: float-logo 6s ease-in-out infinite;
-        }
     </style>
 </head>
 
@@ -378,13 +368,37 @@
                     </div>
                 </div>
 
-                  <!-- Floating Logo Feature -->
-                <div class="lg:col-span-5 flex justify-center items-center relative order-1 lg:order-2 mb-8 lg:mb-0">
-                    <div class="reveal reveal-scale w-[280px] sm:w-[350px] md:w-[450px] lg:w-[500px] animate-float-logo"
+                <!-- Featured Mockup Video -->
+                <div class="lg:col-span-5 flex justify-center items-center relative order-1 lg:order-2 mb-4 lg:mb-0">
+                    <div class="reveal reveal-scale w-[240px] sm:w-[280px] md:w-[320px] aspect-[9/19] bg-lux-charcoal border-[6px] md:border-[8px] border-lux-gold-500/30 rounded-[2.2rem] md:rounded-[3rem] overflow-hidden shadow-2xl relative"
                         style="transition-delay: 200ms;">
-                        <img src="./img/logo.jpeg" alt="Veny Studio Logo" class="w-full h-auto object-contain drop-shadow-2xl rounded-lg">
+                        <!-- iPhone Notch Decorator -->
+                        <div
+                            class="absolute top-0 left-1/2 -translate-x-1/2 w-28 md:w-40 h-4 md:h-6 bg-lux-charcoal/90 border-b border-lux-gold-500/10 rounded-b-xl md:rounded-b-2xl z-30 flex justify-center items-end pb-0.5 md:pb-1">
+                            <div class="w-8 md:w-12 h-1 bg-black rounded-full mb-0.5 md:mb-1"></div>
+                        </div>
+
+                        <!-- Video overlay to simulate UI -->
+                        <div
+                            class="absolute inset-x-3 bottom-4 md:bottom-6 z-20 pointer-events-none flex flex-col gap-1.5 md:gap-2">
+                            <span
+                                class="text-[8px] md:text-[10px] uppercase tracking-widest text-lux-gold-200 bg-black/40 backdrop-blur-md px-2.5 py-0.5 self-start rounded-full">Audiovisual
+                                de Luxo</span>
+                            <h4 class="text-xs md:text-sm font-bold text-white text-shadow drop-shadow-md">Estética &
+                                Sofisticação Médica</h4>
+                            <p class="text-[9px] md:text-[10px] text-white/80 drop-shadow-md leading-snug">
+                                Cinematografia real gravada para posicionamento de alto valor no Instagram.</p>
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10">
+                        </div>
+
+                        <!-- Video Playback -->
+                        <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                            <source src="https://ntyrbhtdviconguqbugx.supabase.co/storage/v1/object/public/erik-media/videos profissionais 02.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeos.
+                        </video>
                     </div>
-                </div>
 
                     <!-- Ambient golden circle decorator behind phone -->
                     <div
